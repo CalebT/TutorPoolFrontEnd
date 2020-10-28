@@ -12,6 +12,7 @@ import SubjectBubbleFull from '../../comps/SubjectBubbleFull';
 import SmallBubble from '../../comps/SmallBubbleButton';
 import UserCard from'../../comps/UserCard';
 import NavBar from '../../comps/NavBar';
+import DeleteButton from '../../comps/DeleteButton';
 
 storiesOf('Custom Button', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
@@ -40,8 +41,15 @@ storiesOf('Custom Button', module)
     <SmallBubble text="Video Calls" borderColor="#576060"/>
   ))
   .add('User Card', () => (
+    <UserCard text1="Becca Williams" text2="Hello this is the description" imgsrc={require('../../images/x-circle.png')}/>
+  ))
+  .add('User Card2', () => (
     <UserCard text1="Becca Williams" text2="Hello this is the description"/>
   ))
   .add('Nav Bar', () => (
     <NavBar/>
-  ));
+  ))
+  .add("Delete button", () => (
+    <DeleteButton text="Delete Account" />
+  ))
+  ;

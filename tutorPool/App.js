@@ -8,11 +8,11 @@
 
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import Button from './comps/Button';
+import BlueButton from './comps/BlueButton';
 
 const App = () => {
   return <View style={styles.container}>
-    <Button />
+    <BlueButton />
   </View>
 }
 

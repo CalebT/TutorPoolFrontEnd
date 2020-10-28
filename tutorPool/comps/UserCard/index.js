@@ -2,11 +2,11 @@ import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import propTypes from 'prop-types';
 
-const UserCard = ({text1, text2}) => {
+const UserCard = ({text1, text2, imgsrc}) => {
     return <View >
         <TouchableOpacity style={styles.buttonBox}>
             <View style={styles.imageCont}>
-                <Image></Image>
+                <Image style={styles.image} source={imgsrc}></Image>
             </View>
             <Text style={styles.name}>{text1}</Text>
             <Text style={styles.description}>{text2}</Text>
@@ -47,14 +47,20 @@ const styles=StyleSheet.create({
         width:60,
         height:60,
         borderRadius:50,
-        backgroundColor:"red",
+        backgroundColor:"white",
+    },
+    image: {
+        resizeMode:'contain',
+        maxWidth:60,
+        top:-10,
     }
 });
 
-UserCard.defaultprops = {
+UserCard.defaultProps = {
     text1:"Default",
     text2:"Default",
-    source:"placeholder"
+    source:"placeholder",
+    imgsrc:require('../../images/icon.png')
 }
 
 UserCard.propTypes = {

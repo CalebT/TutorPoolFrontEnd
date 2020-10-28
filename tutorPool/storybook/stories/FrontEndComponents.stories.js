@@ -11,6 +11,7 @@ import SubjectBubble from '../../comps/SubjectBubbles';
 import SubjectBubbleFull from '../../comps/SubjectBubbleFull';
 import SmallBubble from '../../comps/SmallBubbleButton';
 import UserCard from'../../comps/UserCard';
+import NavBar from '../../comps/NavBar';
 
 storiesOf('Custom Button', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
@@ -40,4 +41,7 @@ storiesOf('Custom Button', module)
   ))
   .add('User Card', () => (
     <UserCard text1="Becca Williams" text2="Hello this is the description"/>
+  ))
+  .add('Nav Bar', () => (
+    <NavBar/>
   ));

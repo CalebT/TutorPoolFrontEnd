@@ -10,6 +10,7 @@ import SubjectRectangle from '../../comps/SubjectRectangle';
 import SubjectBubble from '../../comps/SubjectBubbles';
 import SubjectBubbleFull from '../../comps/SubjectBubbleFull';
 import SmallBubble from '../../comps/SmallBubbleButton';
+import UserCard from'../../comps/UserCard';
 
 storiesOf('Custom Button', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
@@ -37,4 +38,6 @@ storiesOf('Custom Button', module)
   .add('Small Bubble Button', () => (
     <SmallBubble text="Video Calls" borderColor="#576060"/>
   ))
-;
+  .add('User Card', () => (
+    <UserCard text1="Becca Williams" text2="Hello this is the description"/>
+  ));

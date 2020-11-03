@@ -63,7 +63,7 @@ const styles = StyleSheet.create ({
 // export default App;
 //Yina
 
-
+//kaye:
 // import React, { Component } from "react";
 // import { View, Text, StyleSheet, ScrollView } from "react-native";
 // import BlueButton from "../comps/button";

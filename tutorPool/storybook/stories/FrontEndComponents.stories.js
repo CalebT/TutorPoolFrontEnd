@@ -10,6 +10,7 @@ import SubjectRectangle from '../../comps/SubjectRectangle';
 import SubjectBubble from '../../comps/SubjectBubbles';
 import SmallBubble from '../../comps/SmallBubbleButton';
 import UserCard from'../../comps/UserCard';
+import NavBar from '../../comps/NavBar';
 import DeleteButton from '../../comps/DeleteButton';
 import AvailableinText from '../../comps/AvailableinText';
 
@@ -38,6 +39,9 @@ storiesOf('Custom Button', module)
   ))
   .add('User Card', () => (
     <UserCard text1="Becca Williams" text2="Hello this is the description"/>
+  ))
+  .add('Nav Bar', () => (
+    <NavBar/>
   ))
   .add("Delete button", () => (
     <DeleteButton text="Delete Account" />

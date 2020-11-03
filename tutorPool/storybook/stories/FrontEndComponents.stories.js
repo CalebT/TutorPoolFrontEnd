@@ -8,10 +8,10 @@ import BlueButton from '../../comps/BlueButton';
 import SubjectSquare from '../../comps/SubjectSquare';
 import SubjectRectangle from '../../comps/SubjectRectangle';
 import SubjectBubble from '../../comps/SubjectBubbles';
-import SubjectBubbleFull from '../../comps/SubjectBubbleFull';
 import SmallBubble from '../../comps/SmallBubbleButton';
 import UserCard from'../../comps/UserCard';
 import DeleteButton from '../../comps/DeleteButton';
+import AvailableinText from '../../comps/AvailableinText';
 
 storiesOf('Custom Button', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
@@ -33,19 +33,16 @@ storiesOf('Custom Button', module)
   .add('Subject Bubble Button',  () => (
     <SubjectBubble text="History"/>
   ))
-  .add('Subject Bubble Full Button', () => (
-    <SubjectBubbleFull text="English" />
-  ))
   .add('Small Bubble Button', () => (
     <SmallBubble text="Video Calls" borderColor="#576060"/>
   ))
   .add('User Card', () => (
-    <UserCard text1="Becca Williams" text2="Hello this is the description" imgsrc={require('../../images/x-circle.png')}/>
-  ))
-  .add('User Card2', () => (
     <UserCard text1="Becca Williams" text2="Hello this is the description"/>
   ))
   .add("Delete button", () => (
     <DeleteButton text="Delete Account" />
+  ))
+  .add("Available in text", () => (
+    <AvailableinText text="Available in"/>
   ))
   ;

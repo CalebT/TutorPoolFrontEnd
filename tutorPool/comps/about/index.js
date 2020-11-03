@@ -6,7 +6,7 @@ const AboutMe = ({ text }) => {
   return (
     <View>
       <TouchableOpacity style={styles.AboutMe}>
-        <Text style={styles.title}>About Me</Text>
+        <Text style={styles.title}>About meee</Text>
         <Text style={styles.description}>{text}</Text>
       </TouchableOpacity>
     </View>

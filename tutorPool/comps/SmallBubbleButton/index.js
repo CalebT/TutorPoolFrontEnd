@@ -1,13 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import propTypes from 'prop-types';
 
 const SmallBubble = ({text}) => {
+    const [selected, setSelected] = useState(false);
+
+    const contStyle = {
+        backgroundColor:selected?"#595CFF":"white"
+    }
+
+    const textStyle = {
+        color:selected?"white":"#595CFF",
+    }
     return <View >
         <TouchableOpacity
-        style={styles.buttonBox}
+        style={[styles.buttonBox, contStyle]}
+        onPress={()=>
+            setSelected(!selected)
+        }
         >
-            <Text style={styles.description}>{text}</Text>
+            <Text             
+            style={[styles.description, textStyle]}
+            onPress={()=>
+                setSelected(!selected)
+            }
+            >
+                {text}</Text>
         </TouchableOpacity>
     </View>
 }

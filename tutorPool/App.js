@@ -62,4 +62,32 @@ const styles = StyleSheet.create ({
 
 // export default App;
 //Yina
+
+
+// import React, { Component } from "react";
+// import { View, Text, StyleSheet, ScrollView } from "react-native";
+// import BlueButton from "../comps/button";
+// import AboutMe from "../comps/about";
+// import AvailableIn from "../comps/available";
+// import BackSignIn from "../comps/backSignIn";
+// import BackStudent from "../comps/backStudent";
+// import English from "../comps/english";
+
+// const App = () => {
+//   //return <BlueButton text="hello" />;
+//   return ( 
+//   <ScrollView>
+//   <AboutMe text="Hi! My name is Becca Williams and I am a tutor. I have always tutored when I was at school and specia- lize in English and Arts. Let’s learn together!" />
+//   <AvailableIn text="Available In" />
+//   <BackSignIn text="Back to Sign in"/>
+//   <BackStudent text="Jen Student" />
+//   <English text="English" />
+//   </ScrollView>
+
+//   );
+// };
+// export default App;
+
+
+
 export {default} from './storybook'; 

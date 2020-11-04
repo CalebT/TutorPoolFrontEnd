@@ -1,6 +1,8 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
 import propTypes from 'prop-types';
+import { useEffect, useState } from 'react';
+
 
 const NavBar = ({text}) => {
     return <View>

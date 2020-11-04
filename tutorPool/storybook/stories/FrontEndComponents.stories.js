@@ -13,6 +13,7 @@ import SmallBubble from '../../comps/SmallBubbleButton';
 import UserCard from'../../comps/UserCard';
 import NavBar from '../../comps/NavBar';
 import DeleteButton from '../../comps/DeleteButton';
+import TutorName from '../../comps/TutorName';
 
 storiesOf('Custom Button', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
@@ -51,5 +52,8 @@ storiesOf('Custom Button', module)
   ))
   .add("Delete button", () => (
     <DeleteButton text="Delete Account" />
+  ))
+  .add('Tutor Name', () => (
+    <TutorName/>
   ))
   ;

@@ -35,6 +35,8 @@ const SubjectSquare = ({text}) => {
 
 const styles=StyleSheet.create({
     buttonBox: {
+        margin:7,
+        marginBottom:-12,
         backgroundColor:"white",
         borderWidth:3,
         borderColor:"#595CFF",

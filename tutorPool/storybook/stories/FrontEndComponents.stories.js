@@ -13,6 +13,7 @@ import SmallBubble from '../../comps/SmallBubbleButton';
 import UserCard from'../../comps/UserCard';
 import NavBar from '../../comps/NavBar';
 import DeleteButton from '../../comps/DeleteButton';
+import TutorName from '../../comps/TutorName';
 import AvailableinText from '../../comps/AvailableinText';
 
 storiesOf('Custom Button', module)
@@ -49,6 +50,9 @@ storiesOf('Custom Button', module)
   ))
   .add("Delete button", () => (
     <DeleteButton text="Delete Account" />
+  ))
+  .add('Tutor Name', () => (
+    <TutorName/>
   ))
   .add("Available in text", () => (
     <AvailableinText text="Available in"/>

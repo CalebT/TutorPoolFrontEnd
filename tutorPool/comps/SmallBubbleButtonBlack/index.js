@@ -2,17 +2,17 @@ import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import propTypes from 'prop-types';
 
-const SubjectBubble = ({text}) => {
+const SmallBubbleBlack = ({text}) => {
     const [selected, setSelected] = useState(false);
 
     const contStyle = {
-        backgroundColor:selected?"#595CFF":"white"
+        backgroundColor:selected?"#595CFF":"white",
+        borderColor:selected?"#595CFF":"#576060",
     }
 
     const textStyle = {
-        color:selected?"white":"#595CFF",
+        color:selected?"white":"#576060",
     }
-
     return <View >
         <TouchableOpacity
         style={[styles.buttonBox, contStyle]}
@@ -20,13 +20,13 @@ const SubjectBubble = ({text}) => {
             setSelected(!selected)
         }
         >
-            <Text 
+            <Text             
             style={[styles.description, textStyle]}
             onPress={()=>
                 setSelected(!selected)
-            }>
-                {text}
-            </Text>
+            }
+            >
+                {text}</Text>
         </TouchableOpacity>
     </View>
 }
@@ -34,28 +34,28 @@ const SubjectBubble = ({text}) => {
 const styles=StyleSheet.create({
     buttonBox: {
         backgroundColor:"white",
-        borderColor:"#595CFF",
-        borderWidth:3,
+        borderColor:"#576060",
+        borderWidth:1,
         borderRadius:30,
-        width:110,
-        height:35,
+        width:85,
+        height:25,
         display:"flex",
         justifyContent:"center",
         alignItems:"center",
 
     },
     description: {
-        fontSize:16,
+        fontSize:12,
         color:"#595CFF"
     }
 });
 
-SubjectBubble.defaultprops = {
+SmallBubbleBlack.defaultprops = {
     text:"Default",
 }
 
-SubjectBubble.propTypes = {
+SmallBubbleBlack.propTypes = {
     text:propTypes.string,
 }
 
-export default SubjectBubble;
+export default SmallBubbleBlack;

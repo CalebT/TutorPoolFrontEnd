@@ -52,11 +52,11 @@ const styles=StyleSheet.create({
 });
 
 NavBar.defaultprops = {
-    text:"Default",
+    
 }
 
 NavBar.propTypes = {
-    text:propTypes.string,
+
 }
 
 export default NavBar;

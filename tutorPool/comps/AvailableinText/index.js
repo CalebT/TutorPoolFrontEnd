@@ -14,7 +14,7 @@ const styles=StyleSheet.create({
       marginTop:20,
       fontFamily: "Open Sans",
       fontStyle: "normal",
-      fontWeight: 600,
+      fontWeight:"bold",
       fontSize: 12,
       lineHeight: 20,
       /* identical to box height, or 91% */

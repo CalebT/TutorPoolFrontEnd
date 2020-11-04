@@ -21,7 +21,7 @@ const styles=StyleSheet.create({
       lineHeight: 20,
       /* identical to box height, or 91% */
       
-color: "#131515"
+        color: "#131515"
 
     },
 
@@ -33,7 +33,7 @@ color: "#131515"
       fontSize: 16,
       lineHeight: 20,
       /* identical to box height, or 91% */
-color: "#131515"
+    color: "#131515"
 
     }
 });

@@ -8,17 +8,18 @@ import BlueButton from '../../comps/BlueButton';
 import SubjectSquare from '../../comps/SubjectSquare';
 import SubjectRectangle from '../../comps/SubjectRectangle';
 import SubjectBubble from '../../comps/SubjectBubbles';
-import SubjectBubbleFull from '../../comps/SubjectBubbleFull';
+import SmallBubbleBlack from '../../comps/SmallBubbleButtonBlack';
 import SmallBubble from '../../comps/SmallBubbleButton';
 import UserCard from'../../comps/UserCard';
 import NavBar from '../../comps/NavBar';
 import DeleteButton from '../../comps/DeleteButton';
 import TutorName from '../../comps/TutorName';
+import AvailableinText from '../../comps/AvailableinText';
 
 storiesOf('Custom Button', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
   .add('Email Input', () => (
-      <LoginInput name="Email"/>
+    <LoginInput name="Email"/>
   ))
   .add('Password Input', () => (
     <PasswordInput  name="Password"/>
@@ -35,16 +36,13 @@ storiesOf('Custom Button', module)
   .add('Subject Bubble Button',  () => (
     <SubjectBubble text="History"/>
   ))
-  .add('Subject Bubble Full Button', () => (
-    <SubjectBubbleFull text="English" />
-  ))
   .add('Small Bubble Button', () => (
-    <SmallBubble text="Video Calls" borderColor="#576060"/>
+    <SmallBubble text="Video Calls"/>
+  ))
+  .add('Small Bubble Button Black', () => (
+    <SmallBubbleBlack text="In Person"/>
   ))
   .add('User Card', () => (
-    <UserCard text1="Becca Williams" text2="Hello this is the description" imgsrc={require('../../images/x-circle.png')}/>
-  ))
-  .add('User Card2', () => (
     <UserCard text1="Becca Williams" text2="Hello this is the description"/>
   ))
   .add('Nav Bar', () => (
@@ -55,5 +53,8 @@ storiesOf('Custom Button', module)
   ))
   .add('Tutor Name', () => (
     <TutorName/>
+  ))
+  .add("Available in text", () => (
+    <AvailableinText text="Available in"/>
   ))
   ;

@@ -11,12 +11,13 @@ const LoginInput = ({name}) => {
 
 const styles=StyleSheet.create({
     description: {
-        fontWeight:"bold"
+        fontWeight:"bold",
+        fontSize:18,
     },
 
     inputBox: {
         backgroundColor:"#F4F5F5",
-        width:200,
+        width:300,
         borderRadius:10,
         marginTop:10,
     },

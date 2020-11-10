@@ -9,16 +9,35 @@ import SubjectSquare from '../../comps/SubjectSquare';
 const RegisterPage = ({}) => {
     return <View style={styles.viewCont}>
         <Image style={styles.logo} source={require('../../images/LogoSmall.png')} />
-        <LoginInput style={styles.inputs} name="Email"></LoginInput>
-        <PasswordInput style={styles.inputs} name="Password"></PasswordInput>
-        <PasswordInput style={styles.inputs} name="Confirm Password"></PasswordInput>
-        <Text>I am a</Text>
+        
+        <View style={styles.inputs}>
+            <LoginInput name="Email"></LoginInput>
+        </View>
+        
+        <View style={styles.inputs}>
+            <PasswordInput name="Password"></PasswordInput>
+        </View>
+        
+        <View style={styles.inputs}>
+            <PasswordInput name="Confirm Password"></PasswordInput>
+        </View>
+
+        <View style={styles.textBox}>
+            <Text style={styles.textStyle}>I am a</Text>
+        </View>
+        
         <View style={styles.selectionBox}>
             <SubjectSquare text="Student"/>
             <SubjectSquare text="Tutor"/>
         </View>
-        <BlueButton style={styles.buttonBox} text="REGISTER"></BlueButton>
-        <Text>Back to Sign In</Text>
+
+        <View style={styles.buttonBox}>
+            <BlueButton style={styles.buttonBox} text="REGISTER"></BlueButton>
+        </View>
+        
+        <View style={styles.backBox}>
+            <Text style={styles.textStyle}>Back to Sign in</Text>
+        </View>
     </View>
 }
 
@@ -32,15 +51,38 @@ const styles=StyleSheet.create({
 
     logo: {
         right:75,
-        marginTop:100,
-        marginBottom:50,
+        marginTop:50,
+        marginBottom:40,
     },
+
+    inputs: {
+        marginBottom:15,
+    },
+
+    textStyle: {
+        fontSize:18,
+        fontWeight:'bold',
+    },
+
+    textBox: {
+        position:'relative',
+        right:120,
+    }, 
 
     selectionBox: {
         display:'flex',
         flexDirection:'row',
-        alignContent:'space-between',
-        margin:10
+        position:'relative',
+        top:5,
+        right:52,
+    },
+
+    buttonBox: {
+        marginTop: 40,
+    },
+
+    backBox: {
+        marginTop:20,
     }
 });
 

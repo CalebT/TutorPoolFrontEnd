@@ -12,11 +12,13 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^5.11.1",
     "react": "16.13.1",
     "react-native": "0.63.3",
     "react-native-gradient-buttons": "^2.0.1",
     "react-native-linear-gradient": "^2.5.6",
-    "react-native-svg": "^12.1.0"
+    "react-native-svg": "^12.1.0",
+    "typeface-open-sans": "^1.1.13"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",

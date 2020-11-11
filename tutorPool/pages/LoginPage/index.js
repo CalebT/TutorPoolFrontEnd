@@ -8,11 +8,28 @@ import BlueButton from '../../comps/BlueButton';
 const LoginPage = ({}) => {
     return <View style={styles.viewCont}>
         <Image style={styles.logo} source={require('../../images/Logo.png')} />
-        <LoginInput style={styles.inputs} name="Email"></LoginInput>
-        <PasswordInput style={styles.inputs} name="Password"></PasswordInput>
-        <BlueButton style={styles.buttonBox} text="SIGN IN"></BlueButton>
-        <Text>New on Tutor Pool?</Text>
-        <BlueButton style={styles.buttonBox} text="REGISTER NOW"></BlueButton>
+
+        <View style={styles.inputs}>
+            <LoginInput  name="Email"></LoginInput>
+        </View>
+
+        <View style={styles.inputs}>
+            <PasswordInput name="Password"></PasswordInput>
+        </View>
+        
+        <View style={styles.buttonBox}>
+            <BlueButton text="SIGN IN"></BlueButton>
+        </View>
+
+        <View style={styles.textBox}>
+            <Text style={styles.textStyle}>
+                New on Tutor Pool?
+            </Text>
+        </View>
+
+        <View style={styles.buttonBox}>
+            <BlueButton text="REGISTER NOW"></BlueButton>
+        </View>        
     </View>
 }
 
@@ -26,12 +43,27 @@ const styles=StyleSheet.create({
 
     logo: {
         marginTop:100,
-        marginBottom:50,
+        marginBottom:60,
     },
 
     inputs: {
-        marginBottom:100,
-    }
+        marginBottom:25,
+    },
+
+    buttonBox: {
+        marginTop:20,
+        marginBottom:20,
+    },
+
+    textBox: {
+        marginTop:20,
+        marginBottom:20,
+    },
+
+    textStyle: {
+        fontWeight:'bold', 
+        fontSize:18
+    },
 });
 
 export default LoginPage;

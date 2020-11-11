@@ -16,6 +16,15 @@ import DeleteButton from '../../comps/DeleteButton';
 import TutorName from '../../comps/TutorName';
 import AvailableinText from '../../comps/AvailableinText';
 
+const home = require('../../images/home.png');
+const homeactive = require('../../images/home-active.png');
+const message = require('../../images/message-circle.png');
+const messageactive = require('../../images/message-circle-active.png');
+const bell = require('../../images/bell.png');
+const bellactive = require('../../images/bell-active.png');
+const user = require('../../images/user.png');
+const useractive = require('../../images/user-active.png');
+
 storiesOf('Custom Button', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
   .add('Email Input', () => (
@@ -46,13 +55,13 @@ storiesOf('Custom Button', module)
     <UserCard text1="Becca Williams" text2="Hello this is the description"/>
   ))
   .add('Nav Bar', () => (
-    <NavBar/>
+    <NavBar homeimg={home} messageimg={message} bellimg={bell} userimg={user}/>
   ))
   .add("Delete button", () => (
     <DeleteButton text="Delete Account" />
   ))
   .add('Tutor Name', () => (
-    <TutorName/>
+    <TutorName tutorname="Becca Williams" tutorsubject="English" rating="4.5"/>
   ))
   .add("Available in text", () => (
     <AvailableinText text="Available in"/>

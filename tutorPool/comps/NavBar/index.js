@@ -2,16 +2,18 @@ import React from 'react';
 import {View, Image, StyleSheet} from 'react-native';
 import propTypes from 'prop-types';
 
-const NavBar = ({home, message, bell, user}) => {
+const NavBar = ({homeimg, messageimg, bellimg, userimg}) => {
+
+    
 
     //const [clicked, setClicked] = useState(false);
 
     return <View>
         <View style={styles.navbarContainer}>
-            <Image style={styles.img} source={home}></Image>
-            <Image style={styles.img} source={message}></Image>
-            <Image style={styles.img} source={bell}></Image>
-            <Image style={styles.img} source={user}></Image>
+            <Image style={styles.img} source={homeimg}></Image>
+            <Image style={styles.img} source={messageimg}></Image>
+            <Image style={styles.img} source={bellimg}></Image>
+            <Image style={styles.img} source={userimg}></Image>
         </View>
     </View>
 }
@@ -36,14 +38,10 @@ const styles=StyleSheet.create({
 });
 
 NavBar.defaultprops = {
-    home:require('../../images/home.png'),
-    homeactive:require('../../images/home-active.png'),
-    message:require('../../images/message-circle.png'),
-    messageactive:require('../../images/message-circle-active.png'),
-    bell:require('../../images/bell.png'),
-    bellactive:require('../../images/bell-active.png'),
-    user:require('../../images/user.png'),
-    useractive:require('../../images/user-active.png'),
+    homeimg: home, 
+    messageimg: message, 
+    bellimg: bell, 
+    userimg: user,
     source:"placeholder"
 }
 

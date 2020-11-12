@@ -72,7 +72,7 @@ storiesOf('Custom Button', module)
     <AvailableinText text="Available in"/>
   ))
   .add("About", () => (
-    <AboutMe text="blah blahahhh"/>
+    <AboutMe text="Lorem Ipsum"/>
   ))
 
   .add("BackSignIn", () => (

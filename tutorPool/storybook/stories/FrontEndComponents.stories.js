@@ -15,6 +15,10 @@ import NavBar from '../../comps/NavBar';
 import DeleteButton from '../../comps/DeleteButton';
 import TutorName from '../../comps/TutorName';
 import AvailableinText from '../../comps/AvailableinText';
+import AboutMe from '../../comps/About';
+import BackSignIn from '../../comps/BackSignIn';
+import BackStudent from '../../comps/BackStudent';
+import English from '../../comps/English';
 
 const home = require('../../images/home.png');
 const homeactive = require('../../images/home-active.png');
@@ -67,4 +71,21 @@ storiesOf('Custom Button', module)
   .add("Available in text", () => (
     <AvailableinText text="Available in"/>
   ))
+  .add("About", () => (
+    <AboutMe text="blah blahahhh"/>
+  ))
+
+  .add("BackSignIn", () => (
+    <BackSignIn text="jk"/>
+  ))
+
+  .add("BackStudent", () => (
+    <BackStudent text="back"/>
+  ))
+
+  .add("English", () => (
+    <English text="english"/>
+  ))
+
+
   ;

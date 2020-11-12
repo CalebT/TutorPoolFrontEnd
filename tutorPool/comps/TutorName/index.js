@@ -2,26 +2,49 @@ import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
 import propTypes from 'prop-types';
 
-const TutorName = ({tutorname, tutorsubject, rating, imgsrc}) => {
+const TutorName = ({tutorname, tutorsubject1, tutorsubject2, tutorsubject3, rating, imgsrc}) => {
     return <View style={styles.tutorNameContainer}>
         <View>
             <Image source={imgsrc}></Image>
         </View>
-        <View>
-            <Text style={styles.tutorNameText}>{tutorname}</Text>
-            <Text style={styles.tutorSubjectText}>{tutorsubject}</Text>
-            <Text style={styles.tutorRateText}>{rating}</Text>
+        <View style={styles.tutorInfo}>
+            <View>
+                <Text style={styles.tutorNameText}>{tutorname}</Text>
+                <Text style={styles.tutorSubjectText}>{tutorsubject1} {tutorsubject2} {tutorsubject3}</Text>
+            </View>
+            <View style={styles.tutorRating}>
+                <Image style={styles.star} source={require('../../images/star.png')}></Image>
+                <Text style={styles.tutorRateText}>{rating}</Text>
+            </View>
         </View>
     </View>
 }
 
 const styles=StyleSheet.create({
     tutorNameContainer: {
-        
+        flexDirection: "row",
+        alignItems: "center"
+    },
+
+    tutorInfo: {
+        marginLeft: 20,
+    },
+
+    tutorRating: {
+        flexDirection: "row",
+        alignItems: "center"
+    },
+
+    star: {
+        width: 12,
+        height: 12,
+        marginRight: 5
     },
 
     tutorNameText: {
-        color: "black",
+        fontSize:16,
+        fontWeight:"bold",
+
     },
 
     tutorSubjectText: {
@@ -36,7 +59,9 @@ const styles=StyleSheet.create({
 
 TutorName.defaultprops = {
     tutorname:"Becca Williams",
-    tutorsubject:"English",
+    tutorsubject1:"English",
+    tutorsubject2:"",
+    tutorsubject3:"",
     rating:"4.5",
     imgsrc: require('../../images/icon.png')
 }

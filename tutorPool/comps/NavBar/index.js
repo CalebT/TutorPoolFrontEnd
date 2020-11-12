@@ -38,10 +38,10 @@ const styles=StyleSheet.create({
 });
 
 NavBar.defaultprops = {
-    homeimg: home, 
-    messageimg: message, 
-    bellimg: bell, 
-    userimg: user,
+    homeimg: "", 
+    messageimg: "", 
+    bellimg: "", 
+    userimg: "",
     source:"placeholder"
 }
 

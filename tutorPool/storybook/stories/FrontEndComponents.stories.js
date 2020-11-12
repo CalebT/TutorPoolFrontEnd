@@ -24,6 +24,7 @@ const bell = require('../../images/bell.png');
 const bellactive = require('../../images/bell-active.png');
 const user = require('../../images/user.png');
 const useractive = require('../../images/user-active.png');
+const icon = require('../../images/icon.png');
 
 storiesOf('Custom Button', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
@@ -61,7 +62,7 @@ storiesOf('Custom Button', module)
     <DeleteButton text="Delete Account" />
   ))
   .add('Tutor Name', () => (
-    <TutorName tutorname="Becca Williams" tutorsubject="English" rating="4.5"/>
+    <TutorName imgsrc={icon} tutorname="Becca Williams" tutorsubject1="English," tutorsubject2="Art" tutorsubject3=""rating="4.5"/>
   ))
   .add("Available in text", () => (
     <AvailableinText text="Available in"/>

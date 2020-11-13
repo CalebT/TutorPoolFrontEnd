@@ -22,6 +22,8 @@ import English from '../../comps/English';
 import AboutInput from '../../comps/AboutInput';
 import OtherSubjectInput from '../../comps/OtherSubjectInput';
 import StudentProfile from '../../comps/StudentProfile';
+import MyRatesInput from '../../comps/MyRatesInput';
+import SendChatInput from '../../comps/SendChatInput';
 import TutorNameEdit from '../../comps/TutorNameEdit';
 import Rates from '../../comps/Rates';
 import RequestTutoring from '../../comps/RequestTutoring';

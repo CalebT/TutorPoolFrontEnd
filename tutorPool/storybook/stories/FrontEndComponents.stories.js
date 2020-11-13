@@ -22,6 +22,7 @@ import English from '../../comps/English';
 import AboutInput from '../../comps/AboutInput';
 import OtherSubjectInput from '../../comps/OtherSubjectInput';
 import StudentProfile from '../../comps/StudentProfile';
+import TutorNameEdit from '../../comps/TutorNameEdit';
 
 const home = require('../../images/home.png');
 const homeactive = require('../../images/home-active.png');
@@ -100,6 +101,10 @@ storiesOf('Custom Button', module)
 
   .add('Student Profile', () => (
     <StudentProfile  text1="John Doe" text2="Student"/>
+  ))
+
+  .add('Tutor Name Edit', () => (
+    <TutorNameEdit imgsrc={icon} tutorname="Becca Williams" tutorsubject1="English," tutorsubject2="Art" tutorsubject3=""/>
   ))
 
 

@@ -104,11 +104,4 @@ storiesOf('Custom Button', module)
     <StudentProfile  text1="John Doe" text2="Student"/>
   ))
 
-  .add('My Rates Input', () => (
-    <MyRatesInput name="My Rates"/>
-  ))
 
-  .add('Send Chat Input', () => (
-    <SendChatInput />
-  ))
-  ;

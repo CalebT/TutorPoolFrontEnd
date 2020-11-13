@@ -22,8 +22,15 @@ import English from '../../comps/English';
 import AboutInput from '../../comps/AboutInput';
 import OtherSubjectInput from '../../comps/OtherSubjectInput';
 import StudentProfile from '../../comps/StudentProfile';
+<<<<<<< HEAD
 import MyRatesInput from '../../comps/MyRatesInput';
 import SendChatInput from '../../comps/SendChatInput';
+=======
+import TutorNameEdit from '../../comps/TutorNameEdit';
+import Rates from '../../comps/Rates';
+import RequestTutoring from '../../comps/RequestTutoring';
+import TopNav from '../../comps/TopNav';
+>>>>>>> f1c2c0665dc92ab420043b1da2412826d99f804f
 
 const home = require('../../images/home.png');
 const homeactive = require('../../images/home-active.png');
@@ -104,11 +111,28 @@ storiesOf('Custom Button', module)
     <StudentProfile  text1="John Doe" text2="Student"/>
   ))
 
+<<<<<<< HEAD
   .add('My Rates Input', () => (
     <MyRatesInput  name="My Rates"/>
   ))
 
   .add('Send Chat Input', () => (
     <SendChatInput />
+=======
+  .add('Tutor Name Edit', () => (
+    <TutorNameEdit imgsrc={icon} tutorname="Becca Williams" tutorsubject1="English," tutorsubject2="Art" tutorsubject3=""/>
+  ))
+
+  .add('Rates', () => (
+    <Rates />
+  ))
+
+  .add('Request Tutoring', () => (
+    <RequestTutoring text="REQUEST TUTORING"/>
+  ))
+
+  .add('Top Nav', () => (
+    <TopNav />
+>>>>>>> f1c2c0665dc92ab420043b1da2412826d99f804f
   ))
 

@@ -6,9 +6,11 @@ const English = ({ text }) => {
   return (
     <View>
       <TouchableOpacity style={styles.Box}>
-        <Text style={styles.Eng}>{text}</Text>
-        <TouchableOpacity style={styles.Circle}>
-        <Image source={require('../../images/circle.png')}></Image>
+      <TouchableOpacity>
+          <Text style={styles.Text}>{text}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.Arrow}>
+        <Image source={require('../../images/blue-x-circle.png')}></Image>
         </TouchableOpacity>
       </TouchableOpacity>
     </View>
@@ -17,22 +19,22 @@ const English = ({ text }) => {
 
 const styles = StyleSheet.create({
   Box: {
-    width: 800,
+    display: "flex",
     flexDirection: "row",
-    margin: 5
+    alignItems: "center",
   },
-  Eng: {
-    margin: 5,
-    color: "#595CFF",
-    fontSize: 18
-  },
-  Circle: {
-    width: 20
+
+  Text: {
+  color: "#595CFF",
+  fontWeight: "bold",
+   margin:5,
+   padding:5
+
   }
 });
 
 English.defaultprops = {
-  text: "Default"
+  text: "English"
 };
 
 English.propTypes = {

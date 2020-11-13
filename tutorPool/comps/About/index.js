@@ -15,9 +15,7 @@ const AboutMe = ({ text }) => {
 
 const styles = StyleSheet.create({
   AboutMe: {
-    backgroundColor: "#FFF",
     width: 300,
-    height: 50,
     display: "flex"
   },
   title: {
@@ -34,7 +32,7 @@ const styles = StyleSheet.create({
 });
 
 AboutMe.defaultprops = {
-  text: "Default"
+  text: "This is A Description"
 };
 AboutMe.propTypes = {
   text: propTypes.string

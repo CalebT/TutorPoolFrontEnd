@@ -19,6 +19,9 @@ import AboutMe from '../../comps/About';
 import BackSignIn from '../../comps/BackSignIn';
 import BackStudent from '../../comps/BackStudent';
 import English from '../../comps/English';
+import AboutInput from '../../comps/AboutInput';
+import OtherSubjectInput from '../../comps/OtherSubjectInput';
+import StudentProfile from '../../comps/StudentProfile';
 
 const home = require('../../images/home.png');
 const homeactive = require('../../images/home-active.png');
@@ -72,19 +75,31 @@ storiesOf('Custom Button', module)
     <AvailableinText text="Available in"/>
   ))
   .add("About", () => (
-    <AboutMe text="Lorem Ipsum"/>
+    <AboutMe text="Hi! My name is Becca Williams and I am a tutor. I have always tutored when I was at school and specialize in English and Arts. Let’s learn together!"/>
   ))
 
   .add("BackSignIn", () => (
-    <BackSignIn text="jk"/>
+    <BackSignIn text="Back to Sign In"/>
   ))
 
   .add("BackStudent", () => (
-    <BackStudent text="back"/>
+    <BackStudent text="Jen Student"/>
   ))
 
   .add("English", () => (
-    <English text="english"/>
+    <English text="English"/>
+  ))
+
+  .add('About Input', () => (
+    <AboutInput  name="About Me"/>
+  ))
+
+  .add('Other Subject Input', () => (
+    <OtherSubjectInput  name="Other Subject"/>
+  ))
+
+  .add('Student Profile', () => (
+    <StudentProfile  text1="John Doe" text2="Student"/>
   ))
 
 

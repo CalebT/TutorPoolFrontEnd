@@ -26,6 +26,7 @@ import TutorNameEdit from '../../comps/TutorNameEdit';
 import Rates from '../../comps/Rates';
 import RequestTutoring from '../../comps/RequestTutoring';
 import TopNav from '../../comps/TopNav';
+import SettingsToggle from '../../comps/SettingsToggle';
 
 const home = require('../../images/home.png');
 const homeactive = require('../../images/home-active.png');
@@ -120,6 +121,10 @@ storiesOf('Custom Button', module)
 
   .add('Top Nav', () => (
     <TopNav />
+  ))
+
+  .add('Settings Toggle', () => (
+    <SettingsToggle />
   ))
 
   ;

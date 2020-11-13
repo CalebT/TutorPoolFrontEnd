@@ -2,26 +2,31 @@ import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
 import propTypes from 'prop-types';
 
-const TutorName = ({tutorname, tutorsubject1, tutorsubject2, tutorsubject3, rating, imgsrc}) => {
+const TutorNameEdit = ({tutorname, tutorsubject1, tutorsubject2, tutorsubject3, rating, imgsrc}) => {
     return <View style={styles.tutorNameContainer}>
         <View>
             <Image style={styles.tutorImage} source={imgsrc}></Image>
+            <View style={styles.camera}>
+                <Image source={require('../../images/camera.png')}></Image>
+            </View>
         </View>
         <View style={styles.tutorInfo}>
             <View>
                 <Text style={styles.tutorNameText}>{tutorname}</Text>
                 <Text style={styles.tutorSubjectText}>{tutorsubject1} {tutorsubject2} {tutorsubject3}</Text>
-            </View>
-            <View style={styles.tutorRating}>
-                <Image style={styles.star} source={require('../../images/star.png')}></Image>
-                <Text style={styles.tutorRateText}>{rating}</Text>
+                <Image style={styles.pencil} source={require('../../images/pencil-create.png')}></Image>
             </View>
         </View>
     </View>
 }
 
 const styles=StyleSheet.create({
-    tutorNameContainer: {
+   pencil:{
+       width: 16.5,
+       height: 16.5
+   },
+
+   tutorNameContainer: {
         flexDirection: "row",
         alignItems: "center"
     },
@@ -30,29 +35,23 @@ const styles=StyleSheet.create({
         marginLeft: 20,
     },
 
-    tutorRating: {
-        flexDirection: "row",
-        alignItems: "center"
-    },
-
-    star: {
-        width: 12,
-        height: 12,
-        marginRight: 5
-    },
-
     tutorNameText: {
         fontSize:16,
         fontWeight:"bold",
 
     },
 
-    tutorSubjectText: {
-        
-    },
+    camera: {
+        backgroundColor: "#3A86FF",
+        alignItems:"center",
+        justifyContent:"center",
+        width:30,
+        height:30,
+        borderRadius:100,
+        marginTop: 40,
+        marginLeft: 40,
+        position: "absolute",
 
-    tutorRateText: {
-        
     },
 
     tutorImage: {
@@ -60,10 +59,9 @@ const styles=StyleSheet.create({
         width: 60,
         height: 60,
     }
-
 });
 
-TutorName.defaultprops = {
+TutorNameEdit.defaultprops = {
     tutorname:"Becca Williams",
     tutorsubject1:"English",
     tutorsubject2:"",
@@ -72,10 +70,10 @@ TutorName.defaultprops = {
     imgsrc: require('../../images/icon.png')
 }
 
-TutorName.propTypes = {
+TutorNameEdit.propTypes = {
     tutorname:propTypes.string,
     tutorsubject:propTypes.string,
     rating:propTypes.string,
 }
 
-export default TutorName;
+export default TutorNameEdit;

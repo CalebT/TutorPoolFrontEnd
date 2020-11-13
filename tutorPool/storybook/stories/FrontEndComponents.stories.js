@@ -22,6 +22,9 @@ import English from '../../comps/English';
 import AboutInput from '../../comps/AboutInput';
 import OtherSubjectInput from '../../comps/OtherSubjectInput';
 import StudentProfile from '../../comps/StudentProfile';
+import Rates from '../../comps/Rates';
+import RequestTutoring from '../../comps/RequestTutoring';
+import TopNav from '../../comps/TopNav';
 
 const home = require('../../images/home.png');
 const homeactive = require('../../images/home-active.png');
@@ -102,5 +105,18 @@ storiesOf('Custom Button', module)
     <StudentProfile  text1="John Doe" text2="Student"/>
   ))
 
+  .add('Rates', () => (
+    <Rates />
+  ))
+
+  .add('Request Tutoring', () => (
+    <RequestTutoring text="REQUEST TUTORING"/>
+  ))
+
+  .add('Top Nav', () => (
+    <TopNav />
+  ))
+
+ 
 
   ;

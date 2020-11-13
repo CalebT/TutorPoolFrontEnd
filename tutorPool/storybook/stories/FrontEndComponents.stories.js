@@ -22,15 +22,12 @@ import English from '../../comps/English';
 import AboutInput from '../../comps/AboutInput';
 import OtherSubjectInput from '../../comps/OtherSubjectInput';
 import StudentProfile from '../../comps/StudentProfile';
-<<<<<<< HEAD
 import MyRatesInput from '../../comps/MyRatesInput';
 import SendChatInput from '../../comps/SendChatInput';
-=======
 import TutorNameEdit from '../../comps/TutorNameEdit';
 import Rates from '../../comps/Rates';
 import RequestTutoring from '../../comps/RequestTutoring';
 import TopNav from '../../comps/TopNav';
->>>>>>> f1c2c0665dc92ab420043b1da2412826d99f804f
 
 const home = require('../../images/home.png');
 const homeactive = require('../../images/home-active.png');

@@ -2,15 +2,15 @@ import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import propTypes from "prop-types";
 
-const BackSignIn = ({ text }) => {
+const TopNav = ({ text }) => {
   return (
     <View>
       <TouchableOpacity style={styles.Box}>
-        <TouchableOpacity style={styles.Arrow}>
-        <Image source={require('../../images/arrow-left.png')}></Image>
+      <TouchableOpacity style={styles.Menu}>
+        <Image source={require('../../images/menu.png')}></Image>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.Student}>
-          <Text style={styles.Text}>{text}</Text>
+        <TouchableOpacity style={styles.Logo}>
+        <Image source={require('../../images/LogoSmall.png')}></Image>
         </TouchableOpacity>
       </TouchableOpacity>
     </View>
@@ -22,27 +22,24 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "space-between"
   },
-  Arrow: {
-    width: 20,
-    height: 15
+
+  Menu: {
+      marginRight: 150,
+  }
+
+      
   
 
-  },
-
-  Text: {
-   paddingTop: 10,
-   marginLeft: 10,
-
-  }
 });
 
-BackSignIn.defaultprops = {
-  text: "Default"
+TopNav.defaultprops = {
+  text: null
 };
 
-BackSignIn.propTypes = {
+TopNav.propTypes = {
   text: propTypes.string
 };
 
-export default BackSignIn;
+export default TopNav;

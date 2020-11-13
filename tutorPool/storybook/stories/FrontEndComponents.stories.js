@@ -22,9 +22,13 @@ import English from '../../comps/English';
 import AboutInput from '../../comps/AboutInput';
 import OtherSubjectInput from '../../comps/OtherSubjectInput';
 import StudentProfile from '../../comps/StudentProfile';
+import MyRatesInput from '../../comps/MyRatesInput';
+import SendChatInput from '../../comps/SendChatInput';
+import TutorNameEdit from '../../comps/TutorNameEdit';
 import Rates from '../../comps/Rates';
 import RequestTutoring from '../../comps/RequestTutoring';
 import TopNav from '../../comps/TopNav';
+import SettingsToggle from '../../comps/SettingsToggle';
 
 const home = require('../../images/home.png');
 const homeactive = require('../../images/home-active.png');
@@ -105,6 +109,17 @@ storiesOf('Custom Button', module)
     <StudentProfile  text1="John Doe" text2="Student"/>
   ))
 
+  .add('My Rates Input', () => (
+    <MyRatesInput  name="My Rates"/>
+  ))
+
+  .add('Send Chat Input', () => (
+    <SendChatInput />
+  ))
+  .add('Tutor Name Edit', () => (
+    <TutorNameEdit imgsrc={icon} tutorname="Becca Williams" tutorsubject1="English," tutorsubject2="Art" tutorsubject3=""/>
+  ))
+
   .add('Rates', () => (
     <Rates />
   ))
@@ -117,6 +132,8 @@ storiesOf('Custom Button', module)
     <TopNav />
   ))
 
- 
+  .add('Settings Toggle', () => (
+    <SettingsToggle />
+  ))
 
   ;

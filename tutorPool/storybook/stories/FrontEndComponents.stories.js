@@ -111,14 +111,12 @@ storiesOf('Custom Button', module)
     <StudentProfile  text1="John Doe" text2="Student"/>
   ))
 
-<<<<<<< HEAD
   .add('My Rates Input', () => (
     <MyRatesInput  name="My Rates"/>
   ))
 
   .add('Send Chat Input', () => (
     <SendChatInput />
-=======
   .add('Tutor Name Edit', () => (
     <TutorNameEdit imgsrc={icon} tutorname="Becca Williams" tutorsubject1="English," tutorsubject2="Art" tutorsubject3=""/>
   ))
@@ -133,6 +131,5 @@ storiesOf('Custom Button', module)
 
   .add('Top Nav', () => (
     <TopNav />
->>>>>>> f1c2c0665dc92ab420043b1da2412826d99f804f
   ))
 

@@ -7,7 +7,7 @@ const SettingsToggle = () => {
     const [clicked, setClicked] = useState(false);
 
     const contStyle = {
-        backgroundColor:clicked?"#06D6A0":"#F4F5F5",
+        backgroundColor:clicked?"#F4F5F5":"#06D6A0",
     }
 
     const roundStyle = {

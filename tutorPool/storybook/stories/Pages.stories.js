@@ -5,6 +5,9 @@ import RegisterPage from '../../pages/RegisterPage';
 import StudentHomepage from '../../pages/StudentHomepage';
 import PullOutMenu from '../../pages/PullOutMenu';
 import SettingsPage from '../../pages/SettingsPage';
+import FindTutor from '../../pages/FindTutor';
+import MessageTutor from '../../pages/MessageTutor';
+import ProfileTutor from '../../pages/ProfileTutor';
 
 storiesOf('Pages', module)
     .add('Login Page', () => (
@@ -21,5 +24,17 @@ storiesOf('Pages', module)
     ))
     .add('Settings Menu', () => (
         <SettingsPage />
+    ))
+
+    .add('Find A Tutor', () => (
+        <FindTutor />
+    ))
+
+    .add('Message (Tutor)', () => (
+        <MessageTutor />
+    ))
+
+    .add('Profile (Tutor)', () => (
+        <ProfileTutor />
     ))
     ;

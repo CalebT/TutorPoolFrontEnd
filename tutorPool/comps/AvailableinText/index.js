@@ -12,7 +12,6 @@ const styles=StyleSheet.create({
 
     description: {
       marginTop:20,
-      fontFamily: "Open Sans",
       fontStyle: "normal",
       fontWeight:"bold",
       fontSize: 12,

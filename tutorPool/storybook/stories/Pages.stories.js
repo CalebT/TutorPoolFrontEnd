@@ -4,6 +4,7 @@ import LoginPage from '../../pages/LoginPage';
 import RegisterPage from '../../pages/RegisterPage';
 import StudentHomepage from '../../pages/StudentHomepage';
 import PullOutMenu from '../../pages/PullOutMenu';
+import SettingsPage from '../../pages/SettingsPage';
 
 storiesOf('Pages', module)
     .add('Login Page', () => (
@@ -17,5 +18,8 @@ storiesOf('Pages', module)
     ))
     .add('Pull out Menu', () => (
         <PullOutMenu />
+    ))
+    .add('Settings Menu', () => (
+        <SettingsPage />
     ))
     ;

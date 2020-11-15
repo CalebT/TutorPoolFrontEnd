@@ -11,7 +11,6 @@ const AvailableinText = ({text}) => {
 const styles=StyleSheet.create({
 
     description: {
-      marginTop:20,
       fontStyle: "normal",
       fontWeight:"bold",
       fontSize: 12,

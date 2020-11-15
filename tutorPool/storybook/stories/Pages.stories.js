@@ -8,6 +8,10 @@ import SettingsPage from '../../pages/SettingsPage';
 import FindTutor from '../../pages/FindTutor';
 import MessageTutor from '../../pages/MessageTutor';
 import ProfileTutor from '../../pages/ProfileTutor';
+import ProfileTutorMyrates from '../../pages/ProfileTutorMyrates';
+import ChatBox from '../../pages/ChatBox';
+import Notifications from '../../pages/Notifications';
+import Messages from '../../pages/Messages';
 
 storiesOf('Pages', module)
     .add('Login Page', () => (
@@ -36,5 +40,21 @@ storiesOf('Pages', module)
 
     .add('Profile (Tutor)', () => (
         <ProfileTutor />
+    ))
+
+    .add('Profile My Rates(Tutor)', () => (
+        <ProfileTutorMyrates />
+    ))
+
+    .add('ChatBox', () => (
+        <ChatBox />
+    ))
+
+    .add('Notifications', () => (
+        <Notifications />
+    ))
+
+    .add('Messages', () => (
+        <Messages />
     ))
     ;

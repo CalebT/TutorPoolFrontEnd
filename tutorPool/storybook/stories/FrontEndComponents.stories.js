@@ -29,6 +29,7 @@ import Rates from '../../comps/Rates';
 import RequestTutoring from '../../comps/RequestTutoring';
 import TopNav from '../../comps/TopNav';
 import SettingsToggle from '../../comps/SettingsToggle';
+import ChatContainerR from '../../comps/ChatContainer';
 
 const home = require('../../images/home.png');
 const homeactive = require('../../images/home-active.png');
@@ -136,4 +137,7 @@ storiesOf('Custom Button', module)
     <SettingsToggle />
   ))
 
+  .add("ChatContainerR", () => (
+    <ChatContainerR text="hello" />
+  ))
   ;

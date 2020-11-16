@@ -11,12 +11,11 @@ const HomepageText = ({text}) => {
 const styles=StyleSheet.create({
 
     description: {
-      marginTop:20,
-      fontFamily: "Open Sans",
+    marginTop:20,
       fontStyle: "normal",
       fontWeight: 'bold',
       fontSize: 22,
-      lineHeight: 20,
+      lineHeight: 25,
       /* identical to box height, or 91% */
       
       

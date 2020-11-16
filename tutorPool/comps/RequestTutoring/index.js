@@ -2,12 +2,11 @@ import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import propTypes from 'prop-types';
 
-const BlueButton = ({text, onPress}) => {
+
+const RequestTutoring = ({text}) => {
     return <View >
         <TouchableOpacity
-        style={styles.buttonBox}
-        onPress={onPress}
-        >
+        style={styles.buttonBox} >
             <Text style={styles.description}>{text}</Text>
         </TouchableOpacity>
     </View>
@@ -26,16 +25,16 @@ const styles=StyleSheet.create({
     description: {
         color:"white",
         fontSize:18,
+        fontWeight:"500",
     }
 });
 
-BlueButton.defaultprops = {
+RequestTutoring.defaultprops = {
     text:"Default",
-    onPress:()=>{},
 }
 
-BlueButton.propTypes = {
+RequestTutoring.propTypes = {
     text:propTypes.string,
 }
 
-export default BlueButton;
+export default RequestTutoring;

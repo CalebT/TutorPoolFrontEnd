@@ -7,9 +7,11 @@ import HomepageText from '../../comps/Homepage';
 import FindaTutorText from '../../comps/FindaTutorText';
 import NavBar from '../../comps/NavBar';
 
-const PullOutMenu = ({}) => {
+const PullOutMenu = ({history}) => {
     return <View style={styles.viewCont}>
-        <Image style={styles.close} source={require('../../images/whiteCloseCircle.png')} />
+        <View onPress={()=>history.goBack()}>
+            <Image style={styles.close} source={require('../../images/whiteCloseCircle.png')} />
+        </View>
         <View style={styles.selectionBox}>
             <Text style={styles.fontStyle}>Homepage</Text>
             <Text style={styles.fontStyle}>Messages</Text>
@@ -17,7 +19,7 @@ const PullOutMenu = ({}) => {
             <Text style={styles.fontStyle}>Profile</Text>
             <Text style={styles.fontStyle}>Payment</Text>
         </View>
-        <Text style={styles.signout}>Sign Out</Text>
+        <Text style={styles.signout} onPress={() => history.push('/')}>Sign Out</Text>
         <Image style={styles.logo} source={require('../../images/LogoWhite.png')} />
     </View>
 }

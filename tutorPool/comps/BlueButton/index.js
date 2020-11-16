@@ -2,10 +2,11 @@ import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import propTypes from 'prop-types';
 
-const BlueButton = ({text}) => {
+const BlueButton = ({text, onPress}) => {
     return <View >
         <TouchableOpacity
         style={styles.buttonBox}
+        onPress={onPress}
         >
             <Text style={styles.description}>{text}</Text>
         </TouchableOpacity>
@@ -30,6 +31,7 @@ const styles=StyleSheet.create({
 
 BlueButton.defaultprops = {
     text:"Default",
+    onPress:()=>{},
 }
 
 BlueButton.propTypes = {

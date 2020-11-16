@@ -6,7 +6,7 @@ import PasswordInput from '../../comps/PasswordInput';
 import BlueButton from '../../comps/BlueButton';
 import SubjectSquare from '../../comps/SubjectSquare';
 
-const RegisterPage = ({}) => {
+const RegisterPage = ({history}) => {
     return <View style={styles.viewCont}>
         <Image style={styles.logo} source={require('../../images/LogoSmall.png')} />
         
@@ -32,11 +32,11 @@ const RegisterPage = ({}) => {
         </View>
 
         <View style={styles.buttonBox}>
-            <BlueButton style={styles.buttonBox} text="REGISTER"></BlueButton>
+            <BlueButton style={styles.buttonBox} text="REGISTER" onPress={()=>history.push('/studenthomepage')}></BlueButton>
         </View>
         
         <View style={styles.backBox}>
-            <Text style={styles.textStyle}>Back to Sign in</Text>
+            <Text style={styles.textStyle} onPress={()=>history.push('/')}>Back to Sign in</Text>
         </View>
     </View>
 }
@@ -47,6 +47,7 @@ const styles=StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
         backgroundColor:'white',
+        height:750
     },
 
     logo: {

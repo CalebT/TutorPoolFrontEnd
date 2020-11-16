@@ -2,17 +2,17 @@ import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import propTypes from "prop-types";
 
-const TopNav = ({ text }) => {
+const TopNav = ({onPress1, onPress2}) => {
   return (
     <View>
-      <TouchableOpacity style={styles.Box}>
-      <TouchableOpacity style={styles.Menu}>
+      <View style={styles.Box}>
+      <TouchableOpacity style={styles.Menu} onPress={onPress1}>
         <Image source={require('../../images/menu.png')}></Image>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.Logo}>
-        <Image source={require('../../images/LogoSmall.png')}></Image>
+        <TouchableOpacity style={styles.Logo} >
+        <Image source={require('../../images/LogoSmall.png')} onPress={onPress2}></Image>
         </TouchableOpacity>
-      </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -35,11 +35,9 @@ const styles = StyleSheet.create({
 });
 
 TopNav.defaultprops = {
-  text: null
+  onPress1:()=>{},
+  onPress2:()=>{}
 };
 
-TopNav.propTypes = {
-  text: propTypes.string
-};
 
 export default TopNav;

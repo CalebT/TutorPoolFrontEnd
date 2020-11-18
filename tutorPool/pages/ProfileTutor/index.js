@@ -7,61 +7,72 @@ import AboutInput from '../../comps/AboutInput';
 import Rates from '../../comps/Rates';
 import AvailableinText from '../../comps/AvailableinText';
 import SmallBubbleButton from '../../comps/SmallBubbleButton';
-import TutorNameEdit from '../../comps/TutorNameEdit';
 import BlueButton from '../../comps/BlueButton';
+import HomepageText from '../../comps/Homepage';
+import MyRatesInput from '../../comps/MyRatesInput';
+import EditProfile from '../../comps/EditProfile';
+
+const home = require('../../images/home.png');
+const homeactive = require('../../images/home-active.png');
+const message = require('../../images/message-circle.png');
+const messageactive = require('../../images/message-circle-active.png');
+const bell = require('../../images/bell.png');
+const bellactive = require('../../images/bell-active.png');
+const user = require('../../images/user.png');
+const useractive = require('../../images/user-active.png');
+const icon = require('../../images/icon.png');
+
 
 
 
 const ProfileTutor = ({}) => {
     return <View style={styles.viewCont}>
         <TopNav />
-        <Text style={styles.Profile}>Profile</Text>
-        <View style={styles.Box}>
-        <TutorNameEdit style={styles.Tutor} tutorname="Becca Williams" tutorsubject1="English," tutorsubject2="Art"/>
-        <AboutInput name="About Me"/>
-        <Rates />
+        <View style={styles.navbarBox}>
+        <HomepageText text="Profile" />
+        <View style={styles.User}>
+        <EditProfile text1="Becca Williams" text2="English, Art"/>
+        </View>
+        </View>
+        <AboutInput name="About Me" />
+        <View style={styles.Rates}><Rates text1="Free" text2="$20" text3="$30"/></View>
         <View style={styles.Avail}>
         <View style={styles.AvailText}><AvailableinText text="Available in"/></View>
         <SmallBubbleButton text="Video Calls"/>
         <SmallBubbleButton text="In-Person"/>
         </View>
-        <View style={styles.UpdateButton}><BlueButton text="Update"/></View>
+        <BlueButton text="Update"/>
+        <View style={styles.NavBar}>
+        <NavBar homeimg={home} messageimg={message} bellimg={bell} userimg={user}/>
         </View>
-        <View style={styles.NavBar}><NavBar /></View>
     </View>
 }
 
 const styles=StyleSheet.create({
-
     viewCont: {
         display:"flex",
-        
+        alignItems:"center",
+        justifyContent:"center",
         backgroundColor:'white',
         marginTop:40,
-        margin:30,
 
     },
 
-    Profile: {
-        fontSize:25,
-        fontWeight: "500",
-        marginTop:43,
+    User: {
+
+    marginTop:20,
+    marginRight:130,
     },
 
-    Tutor: {
-        marginTop: 30,
-    },
-
-    Box: {
-        display:"flex",
-        alignItems:"center",
-        justifyContent:"space-around",
-        marginTop: 30,
-        backgroundColor:"#FFF",
-        borderColor:"#000",
-        borderWidth:1,
-
+    navbarBox: {
        
+        marginTop:10,
+        marginLeft:20,
+    },
+
+    NavBar: {
+        marginTop:20,
+        bottom:-30,
     },
 
     Avail: {
@@ -73,21 +84,11 @@ const styles=StyleSheet.create({
         margin: 30,
     },
 
-    AvailText: {
-        marginBottom:15,
-        marginRight: 30,
-        
-    },
+    Rates: {
+        marginTop:10,
+    }
 
-    UpdateButton: {
-        marginBottom:10
-
-    },
-
-    NavBar: {
-        
-    },
-
+  
 
 });
 

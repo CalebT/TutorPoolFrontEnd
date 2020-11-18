@@ -10,6 +10,7 @@ import SmallBubbleButton from '../../comps/SmallBubbleButton';
 import BlueButton from '../../comps/BlueButton';
 import HomepageText from '../../comps/Homepage';
 import MyRatesInput from '../../comps/MyRatesInput';
+import NewMsgBox from '../../comps/NewMsgBox';
 
 const home = require('../../images/home.png');
 const homeactive = require('../../images/home-active.png');
@@ -30,7 +31,7 @@ const Messages = ({}) => {
         <View style={styles.navbarBox}>
         <HomepageText text="Messages" />
         <View style={styles.User}>
-        <UserCard text1="Jen" text2="User has wrote down review."/>
+        <NewMsgBox text1="Bob Student" text2="Got it! thank you! See you..." text3="3 hours ago"/>
         </View>
         </View>
         <View style={styles.NavBar}>

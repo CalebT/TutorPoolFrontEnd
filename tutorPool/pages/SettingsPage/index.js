@@ -3,7 +3,7 @@ import {View, Text, Image, StyleSheet} from 'react-native';
 import propTypes from 'prop-types';
 import TopNav from '../../comps/TopNav';
 import HomepageText from '../../comps/Homepage';
-import StudentProfile from '../../comps/StudentProfile';
+import EditProfile from '../../comps/EditProfile';
 import LoginInput from '../../comps/LoginInput';
 import SettingsToggle from '../../comps/SettingsToggle';
 
@@ -14,7 +14,7 @@ const SettingsPage = ({}) => {
                 <HomepageText text="Profile"></HomepageText>
             </View>
             <View>
-                <StudentProfile></StudentProfile>
+                <EditProfile />
             </View>
             <LoginInput name="Email"></LoginInput>
             <LoginInput name="Password"></LoginInput>

@@ -6,7 +6,6 @@ import StudentHomepage from '../../pages/StudentHomepage';
 import PullOutMenu from '../../pages/PullOutMenu';
 import SettingsPage from '../../pages/SettingsPage';
 import FindTutor from '../../pages/FindTutor';
-import MessageTutor from '../../pages/MessageTutor';
 import ProfileTutor from '../../pages/ProfileTutor';
 import ProfileTutorMyrates from '../../pages/ProfileTutorMyrates';
 import ChatBox from '../../pages/ChatBox';
@@ -32,10 +31,6 @@ storiesOf('Pages', module)
 
     .add('Find A Tutor', () => (
         <FindTutor />
-    ))
-
-    .add('Message (Tutor)', () => (
-        <MessageTutor />
     ))
 
     .add('Profile (Tutor)', () => (

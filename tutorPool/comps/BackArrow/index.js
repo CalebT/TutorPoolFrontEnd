@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import propTypes from "prop-types";
 
-const BackSignIn = ({ text }) => {
+const BackArrow = ({ text }) => {
   return (
     <View>
       <TouchableOpacity style={styles.Box}>
@@ -37,12 +37,12 @@ const styles = StyleSheet.create({
   }
 });
 
-BackSignIn.defaultprops = {
+BackArrow.defaultprops = {
   text: "Default"
 };
 
-BackSignIn.propTypes = {
+BackArrow.propTypes = {
   text: propTypes.string
 };
 
-export default BackSignIn;
+export default BackArrow;

@@ -10,6 +10,7 @@ import SmallBubbleButton from '../../comps/SmallBubbleButton';
 import BlueButton from '../../comps/BlueButton';
 import HomepageText from '../../comps/Homepage';
 import MyRatesInput from '../../comps/MyRatesInput';
+import EditProfile from '../../comps/EditProfile';
 
 const home = require('../../images/home.png');
 const homeactive = require('../../images/home-active.png');
@@ -30,7 +31,7 @@ const ProfileTutorMyRates = ({}) => {
         <View style={styles.navbarBox}>
         <HomepageText text="Profile" />
         <View style={styles.User}>
-        <UserCard />
+        <EditProfile />
         </View>
         <AboutInput name="About Me"/>
         <View style={styles.MyRates}>

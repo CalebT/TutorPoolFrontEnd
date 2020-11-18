@@ -2,14 +2,20 @@ import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import propTypes from 'prop-types';
 
-const UserCard = ({text1, text2, imgsrc1, imgsrc2}) => {
+const FindTutorBox = ({text1, text2, text3, imgsrc}) => {
     return <View >
         <TouchableOpacity style={styles.buttonBox}>
             <View style={styles.imageCont}>
-                <Image style={styles.image} source={imgsrc1}></Image>
+                <Image style={styles.image} source={imgsrc}></Image>
             </View>
+
+            <View style={styles.Tutor}>
             <Text style={styles.name}>{text1}</Text>
+            <Image style={styles.star} source={require('../../images/star.png')}></Image>
+            <Text style={styles.Num}>{text3}</Text>
+            </View>
             <Text style={styles.description}>{text2}</Text>
+            <Image style={styles.board} source={require('../../images/clipboard.png')}></Image>
         </TouchableOpacity>
     </View>
 }
@@ -24,19 +30,15 @@ const styles=StyleSheet.create({
         display:"flex",
         justifyContent:"center",
         alignItems:"center",
-
-    },
-
-    name: {
-        fontSize:16,
-        fontWeight:"bold",
-        position:"absolute",
-        left:45,
-        top:25,
+        shadowColor: '#000',
+        shadowOffset: { width: 3, height: 3 },
+        shadowOpacity: 0.1,
+        shadowRadius: 1,  
     },
 
     description: {
         fontSize:14,
+        fontWeight:"bold",
         position:"absolute",
         left:45,
         top:50,
@@ -54,20 +56,54 @@ const styles=StyleSheet.create({
         resizeMode:'contain',
         maxWidth:60,
         top:-10,
-    }
+    },
+
+    Tutor: {
+        display:"flex",
+        flexDirection:"row",
+        position:"absolute",
+        top:20,
+        left:45,
+
+    },
+
+    name: {
+        fontSize:16,
+        fontWeight:"bold",
+    },
+
+    star: {
+        height:15,
+        width:15,
+        marginLeft:3,
+
+    },
+
+    Num: {
+        color:"#595CFF",
+        fontWeight:"bold",
+        marginLeft:3,
+    },
+
+    board: {
+        position:"absolute",
+        right:-30,
+
+    },
 });
 
-UserCard.defaultProps = {
+FindTutorBox.defaultProps = {
     text1:"Default",
     text2:"Default",
+    text3:"Default",
     source:"placeholder",
-    imgsrc1:require('../../images/icon.png'),
+    imgsrc:require('../../images/icon.png')
 }
 
-UserCard.propTypes = {
+FindTutorBox.propTypes = {
     text1:propTypes.string,
     text2:propTypes.string,
     source:propTypes.string,
 }
 
-export default UserCard;
+export default FindTutorBox;

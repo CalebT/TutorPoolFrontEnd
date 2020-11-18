@@ -2,14 +2,19 @@ import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import propTypes from 'prop-types';
 
-const UserCard = ({text1, text2, imgsrc1, imgsrc2}) => {
+const NewMsgBox = ({text1, text2, text3, imgsrc}) => {
     return <View >
         <TouchableOpacity style={styles.buttonBox}>
             <View style={styles.imageCont}>
-                <Image style={styles.image} source={imgsrc1}></Image>
+                <Image style={styles.image} source={imgsrc}></Image>
             </View>
+
+            <View style={styles.title}>
             <Text style={styles.name}>{text1}</Text>
-            <Text style={styles.description}>{text2}</Text>
+            </View>
+            <Text style={styles.chatmsg}>{text2}</Text>
+            <Text style={styles.time}>{text3}</Text>
+            <Image style={styles.msg} source={require('../../images/message.png')}></Image>
         </TouchableOpacity>
     </View>
 }
@@ -24,22 +29,18 @@ const styles=StyleSheet.create({
         display:"flex",
         justifyContent:"center",
         alignItems:"center",
-
+        shadowColor: '#000',
+        shadowOffset: { width: 3, height: 3 },
+        shadowOpacity: 0.1,
+        shadowRadius: 1,  
     },
 
-    name: {
-        fontSize:16,
-        fontWeight:"bold",
-        position:"absolute",
-        left:45,
-        top:25,
-    },
-
-    description: {
+    chatmsg: {
         fontSize:14,
         position:"absolute",
         left:45,
         top:50,
+        color:"#576060",
     },
 
     imageCont: {
@@ -54,20 +55,50 @@ const styles=StyleSheet.create({
         resizeMode:'contain',
         maxWidth:60,
         top:-10,
+    },
+
+    title: {
+        display:"flex",
+        flexDirection:"row",
+        position:"absolute",
+        top:20,
+        left:45,
+
+    },
+
+    name: {
+        fontSize:16,
+        fontWeight:"500",
+    },
+
+
+    msg: {
+        position:"absolute",
+        right:-30,
+
+    },
+
+    time: {
+        fontWeight:"500",
+        fontSize:12,
+        position:"absolute",
+        top:75,
+        left:45,
     }
 });
 
-UserCard.defaultProps = {
+NewMsgBox.defaultProps = {
     text1:"Default",
     text2:"Default",
+    text3:"Default",
     source:"placeholder",
-    imgsrc1:require('../../images/icon.png'),
+    imgsrc:require('../../images/icon.png')
 }
 
-UserCard.propTypes = {
+NewMsgBox.propTypes = {
     text1:propTypes.string,
     text2:propTypes.string,
     source:propTypes.string,
 }
 
-export default UserCard;
+export default NewMsgBox;

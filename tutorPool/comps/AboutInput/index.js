@@ -11,7 +11,9 @@ const AboutInput = ({name}) => {
         <Image source={require('../../images/pencil.png')}></Image>
         </TouchableOpacity>
         </TouchableOpacity>
-        <TextInput TextEntry={true} style={styles.inputBox}/>
+        <TextInput 
+            TextEntry={true} style={styles.inputBox}
+            placeholder="Click to Edit.."/>
     </View>
 }
 
@@ -30,6 +32,7 @@ const styles=StyleSheet.create({
 
     inputBox: {backgroundColor:"#F4F5F5",
     width:300,
+    height:100,
     borderRadius:10,
     borderColor: "#000",
     borderWidth: 1,

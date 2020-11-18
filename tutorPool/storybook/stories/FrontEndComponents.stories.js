@@ -16,12 +16,11 @@ import DeleteButton from '../../comps/DeleteButton';
 import TutorName from '../../comps/TutorName';
 import AvailableinText from '../../comps/AvailableinText';
 import AboutMe from '../../comps/About';
-import BackSignIn from '../../comps/BackSignIn';
-import BackStudent from '../../comps/BackStudent';
-import English from '../../comps/English';
+import BackArrow from '../../comps/BackArrow';
+import BlueSubjectText from '../../comps/BlueSubjectText';
 import AboutInput from '../../comps/AboutInput';
 import OtherSubjectInput from '../../comps/OtherSubjectInput';
-import StudentProfile from '../../comps/StudentProfile';
+import EditProfile from '../../comps/EditProfile';
 import MyRatesInput from '../../comps/MyRatesInput';
 import SendChatInput from '../../comps/SendChatInput';
 import TutorNameEdit from '../../comps/TutorNameEdit';
@@ -30,6 +29,12 @@ import RequestTutoring from '../../comps/RequestTutoring';
 import TopNav from '../../comps/TopNav';
 import SettingsToggle from '../../comps/SettingsToggle';
 import ChatContainerR from '../../comps/ChatContainer';
+import EditButton from '../../comps/EditButton';
+import FindTutorBox from '../../comps/FindTutorBox';
+import Review from '../../comps/Review';
+import NewMsgBox from '../../comps/NewMsgBox';
+import NewReviewBox from '../../comps/NewReviewBox';
+
 
 const home = require('../../images/home.png');
 const homeactive = require('../../images/home-active.png');
@@ -68,7 +73,7 @@ storiesOf('Custom Button', module)
     <SmallBubbleBlack text="In Person"/>
   ))
   .add('User Card', () => (
-    <UserCard text1="Becca Williams" text2="Hello this is the description"/>
+    <UserCard text1="Becca Williams" text2="Hello this is the description" />
   ))
   .add('Nav Bar', () => (
     <NavBar homeimg={home} messageimg={message} bellimg={bell} userimg={user}/>
@@ -86,16 +91,12 @@ storiesOf('Custom Button', module)
     <AboutMe text="Hi! My name is Becca Williams and I am a tutor. I have always tutored when I was at school and specialize in English and Arts. Let’s learn together!"/>
   ))
 
-  .add("BackSignIn", () => (
-    <BackSignIn text="Back to Sign In"/>
+  .add("BackArrow", () => (
+    <BackArrow text="Back to Sign In"/>
   ))
 
-  .add("BackStudent", () => (
-    <BackStudent text="Jen Student"/>
-  ))
-
-  .add("English", () => (
-    <English text="English"/>
+  .add("BlueSubjectText", () => (
+    <BlueSubjectText text="English"/>
   ))
 
   .add('About Input', () => (
@@ -106,8 +107,8 @@ storiesOf('Custom Button', module)
     <OtherSubjectInput  name="Other Subject"/>
   ))
 
-  .add('Student Profile', () => (
-    <StudentProfile  text1="John Doe" text2="Student"/>
+  .add('Edit Profile', () => (
+    <EditProfile  text1="John Doe" text2="Student"/>
   ))
 
   .add('My Rates Input', () => (
@@ -122,7 +123,7 @@ storiesOf('Custom Button', module)
   ))
 
   .add('Rates', () => (
-    <Rates />
+    <Rates text1="Free" text2="$20" text3="$30"/>
   ))
 
   .add('Request Tutoring', () => (
@@ -140,4 +141,22 @@ storiesOf('Custom Button', module)
   .add("ChatContainerR", () => (
     <ChatContainerR text="hello" />
   ))
+
+  .add("Find Tutor Box", () => (
+    <FindTutorBox text1="Becca Williams" text2="English, Art" text3="4.5"/>
+  ))
+
+  .add("Review", () => (
+    <Review text1="Writing essays has never been easy for our daughter, but you have managed to help her out. She is more confident when it comes [...]" text2="Bob Smith" text3="5.0"/>
+  ))
+
+  .add("New Msg Box", () => (
+    <NewMsgBox text1="Becca Williams" text2="English, Art" text3="1 hour ago"/>
+  ))
+
+  .add("New Review Box", () => (
+    <NewReviewBox text1="Jen Student" text2="Wrote Down a review." text3="1 hour ago"/>
+  ))
+
+
   ;

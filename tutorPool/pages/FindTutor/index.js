@@ -30,10 +30,12 @@ const icon = require('../../images/icon.png');
 const FindTutor = ({}) => {
     return <View style={styles.viewCont}>
         <TopNav />
-        <View style={styles.Top}><BackArrow text="Find A Tutor"/>
-        <View style={styles.subjects}><BlueSubjectText text="English"/>
-        <BlueSubjectText text="Art"/>
-        </View>
+        <View style={styles.Top}>
+         <Text style={styles.Find}>Find A Tutor</Text>
+            <View style={styles.subjects}>
+                <BlueSubjectText text="English"/>
+                <BlueSubjectText text="Art"/>
+             </View>
         </View>
         <View style={styles.navbarBox}>
         <View style={styles.User}>
@@ -86,6 +88,11 @@ const styles=StyleSheet.create({
         marginTop:30,
         marginRight:200,
 
+    },
+
+    Find: {
+        fontWeight:"600",
+        fontSize:18,
     },
 
     subjects: {

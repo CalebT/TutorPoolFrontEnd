@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import propTypes from "prop-types";
 
-const English = ({ text }) => {
+const BlueSubjectText = ({ text }) => {
   return (
       <View style={styles.Box}>
         <Text style={styles.Text}>{text}</Text>
@@ -30,12 +30,12 @@ const styles = StyleSheet.create({
   }
 });
 
-English.defaultprops = {
+BlueSubjectText.defaultprops = {
   text: "English"
 };
 
-English.propTypes = {
+BlueSubjectText.propTypes = {
   text: propTypes.string
 };
 
-export default English;
+export default BlueSubjectText;

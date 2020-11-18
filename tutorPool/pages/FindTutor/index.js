@@ -1,9 +1,31 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, ScrollView} from 'react-native';
+import {View, Text, Image, StyleSheet} from 'react-native';
 import NavBar from '../../comps/NavBar';
 import TopNav from '../../comps/TopNav';
-import English from '../../comps/English';
 import UserCard from '../../comps/UserCard';
+import AboutInput from '../../comps/AboutInput';
+import Rates from '../../comps/Rates';
+import AvailableinText from '../../comps/AvailableinText';
+import SmallBubbleButton from '../../comps/SmallBubbleButton';
+import BlueButton from '../../comps/BlueButton';
+import HomepageText from '../../comps/Homepage';
+import MyRatesInput from '../../comps/MyRatesInput';
+import BackArrow from '../../comps/BackArrow';
+import BlueSubjectText from '../../comps/BlueSubjectText';
+import FindTutorBox from '../../comps/FindTutorBox';
+
+const home = require('../../images/home.png');
+const homeactive = require('../../images/home-active.png');
+const message = require('../../images/message-circle.png');
+const messageactive = require('../../images/message-circle-active.png');
+const bell = require('../../images/bell.png');
+const bellactive = require('../../images/bell-active.png');
+const user = require('../../images/user.png');
+const useractive = require('../../images/user-active.png');
+const icon = require('../../images/icon.png');
+
+
+
 
 const FindTutor = ({history}) => {
     return <View style={styles.viewCont}>
@@ -35,6 +57,8 @@ const FindTutor = ({history}) => {
 const styles=StyleSheet.create({
     viewCont: {
         display:"flex",
+        alignItems:"center",
+        justifyContent:"center",
         backgroundColor:'white',
         marginTop:40,
 
@@ -75,6 +99,18 @@ const styles=StyleSheet.create({
         alignItems:'center',
         overflow:'scroll',
     },
+
+    Top :{
+        display:"flex",
+        marginTop:30,
+        marginRight:200,
+
+    },
+
+    subjects: {
+        flexDirection:"row",
+    }
+
 });
 
 export default FindTutor;

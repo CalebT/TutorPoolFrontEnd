@@ -11,8 +11,10 @@ const StudentProfile = ({text1, text2, imgsrc}) => {
                 <Image source={require('../../images/camera.png')}></Image>
                 </TouchableOpacity>
                 </View>
+            <View style={styles.info}>
             <Text style={styles.name}>{text1}</Text>
             <Text style={styles.description}>{text2}</Text>
+            </View>
         </TouchableOpacity>
     </View>
 }
@@ -20,17 +22,19 @@ const StudentProfile = ({text1, text2, imgsrc}) => {
 const styles=StyleSheet.create({
     buttonBox: {
         display:"flex",
-        justifyContent:"center",
+        flexDirection:"row",
         alignItems:"center",
     },
 
     name: {
         fontSize:16,
         fontWeight:"bold",
+        marginLeft:10,
     },
 
     description: {
         fontSize:14,
+        marginLeft:10,
     },
 
     imageCont: {
@@ -58,7 +62,7 @@ const styles=StyleSheet.create({
 
 StudentProfile.defaultProps = {
     text1:"Default",
-    text2:"Default",
+    text2:"Student",
     source:"placeholder",
     imgsrc:require('../../images/icon.png')
 }

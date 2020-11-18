@@ -10,6 +10,8 @@ import SmallBubbleButton from '../../comps/SmallBubbleButton';
 import BlueButton from '../../comps/BlueButton';
 import HomepageText from '../../comps/Homepage';
 import MyRatesInput from '../../comps/MyRatesInput';
+import NewMsgBox from '../../comps/NewMsgBox';
+import NewReviewBox from '../../comps/NewReviewBox';
 
 const home = require('../../images/home.png');
 const homeactive = require('../../images/home-active.png');
@@ -29,9 +31,14 @@ const Notifications = ({history}) => {
         <TopNav onPress1={()=>history.push('/pulloutmenu')}/>
         <View style={styles.navbarBox}>
         <HomepageText text="Notifications" />
-        <View style={styles.User}>
-        <UserCard text1="Jen" text2="User has wrote down review."/>
+        <View style={styles.Box}>
+        <NewMsgBox text1="Bob Student" text2="Requested 1st Meeting" text3="3 hours ago"/>
         </View>
+        <View style={styles.Box}>
+        <NewReviewBox text1="Jen Student" text2="User has wrote down review." text3="3 hours ago" />
+        </View>
+
+        
         </View>
         <View style={styles.NavBar}>
         <NavBar homeimg={home} messageimg={message} bellimg={bell} userimg={user}/>
@@ -49,10 +56,11 @@ const styles=StyleSheet.create({
 
     },
 
-    User: {
+    Box: {
 
-marginTop:20,
-},
+    marginTop:20,
+    },
+
     navbarBox: {
        
         marginTop:10,
@@ -62,7 +70,7 @@ marginTop:20,
 
     NavBar: {
         marginTop:20,
-        bottom:-410,
+        bottom:-350,
     }
 
 });

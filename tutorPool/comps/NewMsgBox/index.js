@@ -2,26 +2,24 @@ import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import propTypes from 'prop-types';
 
-const UserCard = ({text1, text2, defaultImg, beccaProfile}) => {
-    return <View style={styles.compCont}>
+const NewMsgBox = ({text1, text2, text3, imgsrc}) => {
+    return <View >
         <TouchableOpacity style={styles.buttonBox}>
             <View style={styles.imageCont}>
-                <Image style={styles.image} source={defaultImg}></Image>
+                <Image style={styles.image} source={imgsrc}></Image>
             </View>
+
+            <View style={styles.title}>
             <Text style={styles.name}>{text1}</Text>
-            <Text style={styles.description}>{text2}</Text>
-            <View style={styles.clipCont}>
-                <Image source={require('../../images/clipboard.png')} />
             </View>
+            <Text style={styles.chatmsg}>{text2}</Text>
+            <Text style={styles.time}>{text3}</Text>
+            <Image style={styles.msg} source={require('../../images/message.png')}></Image>
         </TouchableOpacity>
     </View>
 }
 
 const styles=StyleSheet.create({
-    compCont:{
-        margin:10
-    },
-
     buttonBox: {
         backgroundColor:"white",
         borderRadius:10,
@@ -31,22 +29,18 @@ const styles=StyleSheet.create({
         display:"flex",
         justifyContent:"center",
         alignItems:"center",
-
+        shadowColor: '#000',
+        shadowOffset: { width: 3, height: 3 },
+        shadowOpacity: 0.1,
+        shadowRadius: 1,  
     },
 
-    name: {
-        fontSize:16,
-        fontWeight:"bold",
-        position:"absolute",
-        left:45,
-        top:25,
-    },
-
-    description: {
+    chatmsg: {
         fontSize:14,
         position:"absolute",
         left:45,
         top:50,
+        color:"#576060",
     },
 
     imageCont: {
@@ -57,31 +51,54 @@ const styles=StyleSheet.create({
         borderRadius:50,
         backgroundColor:"white",
     },
-
     image: {
         resizeMode:'contain',
         maxWidth:60,
         top:-10,
     },
 
-    clipCont: {
-        position:'absolute',
-        right:-30
+    title: {
+        display:"flex",
+        flexDirection:"row",
+        position:"absolute",
+        top:20,
+        left:45,
+
+    },
+
+    name: {
+        fontSize:16,
+        fontWeight:"500",
+    },
+
+
+    msg: {
+        position:"absolute",
+        right:-30,
+
+    },
+
+    time: {
+        fontWeight:"500",
+        fontSize:12,
+        position:"absolute",
+        top:75,
+        left:45,
     }
 });
 
-UserCard.defaultProps = {
+NewMsgBox.defaultProps = {
     text1:"Default",
     text2:"Default",
-    defaultImg:require('../../images/icon.png'),
-    beccaProfile:require('../../images/becca.png'),
-
+    text3:"Default",
+    source:"placeholder",
+    imgsrc:require('../../images/icon.png')
 }
 
-UserCard.propTypes = {
+NewMsgBox.propTypes = {
     text1:propTypes.string,
     text2:propTypes.string,
     source:propTypes.string,
 }
 
-export default UserCard;
+export default NewMsgBox;

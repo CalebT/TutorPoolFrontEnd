@@ -10,9 +10,9 @@ import SmallBubbleButton from '../../comps/SmallBubbleButton';
 
 
 
-const ProfileTutor = ({}) => {
+const ProfileTutor = ({history}) => {
     return <View style={styles.viewCont}>
-        <TopNav />
+        <TopNav onPress1={()=>history.push('/pulloutmenu')}/>
         <View style={styles.navbarBox}>
         <Text>Profile</Text>
         <UserCard style={styles.User} />

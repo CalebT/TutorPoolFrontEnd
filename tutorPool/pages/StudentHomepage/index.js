@@ -32,10 +32,10 @@ const StudentHomepage = ({history}) => {
             <SubjectSquare text="History"/>
         </View>
         <View style={styles.buttonBox}>
-            <BlueButton text="FIND A TUTOR"></BlueButton>
+            <BlueButton text="FIND A TUTOR" onPress={() => history.push('/findtutor')}></BlueButton>
         </View>
         <View style={styles.navbarBox}>
-            <NavBar></NavBar>
+            <NavBar ></NavBar>
         </View>
     </View>
 }

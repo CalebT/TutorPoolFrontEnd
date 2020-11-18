@@ -4,16 +4,12 @@ import propTypes from "prop-types";
 
 const English = ({ text }) => {
   return (
-    <View>
-      <TouchableOpacity style={styles.Box}>
-      <TouchableOpacity>
-          <Text style={styles.Text}>{text}</Text>
-        </TouchableOpacity>
+      <View style={styles.Box}>
+        <Text style={styles.Text}>{text}</Text>
         <TouchableOpacity style={styles.Arrow}>
-        <Image source={require('../../images/blue-x-circle.png')}></Image>
+          <Image source={require('../../images/blue-x-circle.png')}></Image>
         </TouchableOpacity>
-      </TouchableOpacity>
-    </View>
+      </View>
   );
 };
 
@@ -22,6 +18,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
+    margin:10,
   },
 
   Text: {

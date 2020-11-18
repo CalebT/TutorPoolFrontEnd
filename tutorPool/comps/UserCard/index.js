@@ -2,19 +2,26 @@ import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import propTypes from 'prop-types';
 
-const UserCard = ({text1, text2, imgsrc}) => {
-    return <View >
+const UserCard = ({text1, text2, defaultImg, beccaProfile}) => {
+    return <View style={styles.compCont}>
         <TouchableOpacity style={styles.buttonBox}>
             <View style={styles.imageCont}>
-                <Image style={styles.image} source={imgsrc}></Image>
+                <Image style={styles.image} source={defaultImg}></Image>
             </View>
             <Text style={styles.name}>{text1}</Text>
             <Text style={styles.description}>{text2}</Text>
+            <View style={styles.clipCont}>
+                <Image source={require('../../images/clipboard.png')} />
+            </View>
         </TouchableOpacity>
     </View>
 }
 
 const styles=StyleSheet.create({
+    compCont:{
+        margin:10
+    },
+
     buttonBox: {
         backgroundColor:"white",
         borderRadius:10,
@@ -49,18 +56,25 @@ const styles=StyleSheet.create({
         borderRadius:50,
         backgroundColor:"white",
     },
+
     image: {
         resizeMode:'contain',
         maxWidth:60,
         top:-10,
+    },
+
+    clipCont: {
+        position:'absolute',
+        right:-30
     }
 });
 
 UserCard.defaultProps = {
     text1:"Default",
     text2:"Default",
-    source:"placeholder",
-    imgsrc:require('../../images/icon.png')
+    defaultImg:require('../../images/icon.png'),
+    beccaProfile:require('../../images/becca.png'),
+
 }
 
 UserCard.propTypes = {

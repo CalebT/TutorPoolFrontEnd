@@ -24,9 +24,9 @@ const icon = require('../../images/icon.png');
 
 
 
-const Messages = ({}) => {
+const Messages = ({history}) => {
     return <View style={styles.viewCont}>
-        <TopNav />
+        <TopNav onPress1={()=>history.push('/pulloutmenu')}/>
         <View style={styles.navbarBox}>
         <HomepageText text="Messages" />
         <View style={styles.User}>

@@ -5,9 +5,9 @@ import LoginInput from '../../comps/LoginInput';
 import PasswordInput from '../../comps/PasswordInput';
 import BlueButton from '../../comps/BlueButton/';
 
-import {Link} from 'react-router-native';
 
 const LoginPage = ({history}) => {
+    
     return <View style={styles.viewCont}>
         <Image style={styles.logo} source={require('../../images/Logo.png')} />
 

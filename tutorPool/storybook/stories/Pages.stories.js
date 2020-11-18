@@ -4,10 +4,14 @@ import LoginPage from '../../pages/LoginPage';
 import RegisterPage from '../../pages/RegisterPage';
 import StudentHomepage from '../../pages/StudentHomepage';
 import PullOutMenu from '../../pages/PullOutMenu';
+import SettingsPage from '../../pages/SettingsPage';
 import FindTutor from '../../pages/FindTutor';
 import MessageTutor from '../../pages/MessageTutor';
 import ProfileTutor from '../../pages/ProfileTutor';
-
+import ProfileTutorMyrates from '../../pages/ProfileTutorMyrates';
+import ChatBox from '../../pages/ChatBox';
+import Notifications from '../../pages/Notifications';
+import Messages from '../../pages/Messages';
 
 storiesOf('Pages', module)
     .add('Login Page', () => (
@@ -22,6 +26,9 @@ storiesOf('Pages', module)
     .add('Pull out Menu', () => (
         <PullOutMenu />
     ))
+    .add('Settings Menu', () => (
+        <SettingsPage />
+    ))
 
     .add('Find A Tutor', () => (
         <FindTutor />
@@ -35,6 +42,19 @@ storiesOf('Pages', module)
         <ProfileTutor />
     ))
 
+    .add('Profile My Rates(Tutor)', () => (
+        <ProfileTutorMyrates />
+    ))
 
-   
+    .add('ChatBox', () => (
+        <ChatBox />
+    ))
+
+    .add('Notifications', () => (
+        <Notifications />
+    ))
+
+    .add('Messages', () => (
+        <Messages />
+    ))
     ;

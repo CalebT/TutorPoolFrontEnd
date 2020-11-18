@@ -3,9 +3,11 @@ import {View, Text, Image, StyleSheet} from 'react-native';
 import propTypes from 'prop-types';
 import LoginInput from '../../comps/LoginInput';
 import PasswordInput from '../../comps/PasswordInput';
-import BlueButton from '../../comps/BlueButton';
+import BlueButton from '../../comps/BlueButton/';
 
-const LoginPage = ({}) => {
+import {Link} from 'react-router-native';
+
+const LoginPage = ({history}) => {
     return <View style={styles.viewCont}>
         <Image style={styles.logo} source={require('../../images/Logo.png')} />
 
@@ -17,8 +19,9 @@ const LoginPage = ({}) => {
             <PasswordInput name="Password"></PasswordInput>
         </View>
         
+
         <View style={styles.buttonBox}>
-            <BlueButton text="SIGN IN"></BlueButton>
+            <BlueButton text="SIGN IN" onPress={()=>history.push('/studenthomepage')}></BlueButton>
         </View>
 
         <View style={styles.textBox}>
@@ -28,8 +31,8 @@ const LoginPage = ({}) => {
         </View>
 
         <View style={styles.buttonBox}>
-            <BlueButton text="REGISTER NOW"></BlueButton>
-        </View>        
+            <BlueButton text="REGISTER NOW" onPress={() => history.push('/register')}></BlueButton>
+        </View>   
     </View>
 }
 
@@ -39,6 +42,7 @@ const styles=StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
         backgroundColor:'white',
+        height:750
     },
 
     logo: {

@@ -8,12 +8,26 @@
 
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import BlueButton from './comps/BlueButton';
+import LoginPage from './pages/LoginPage/index';
+import RegisterPage from './pages/RegisterPage/index';
+import StudentHomepage from './pages/StudentHomepage/index';
+import PullOutMenu from './pages/PullOutMenu';
+
+import { NativeRouter, Route, Link, Switch} from 'react-router-native';
 
 const App = () => {
-  return <View style={styles.container}>
-    <BlueButton />
-  </View>
+  return (
+    <NativeRouter>
+      <View>
+        <Switch>
+          <Route exact path='/' component={LoginPage}/>
+          <Route exact path='/register' component={RegisterPage}/>
+          <Route exact path='/studenthomepage' component={StudentHomepage}/>
+          <Route exact path='/pulloutmenu' component={PullOutMenu}/>
+        </Switch>
+      </View>
+    </NativeRouter>
+  );
 }
 
 const styles = StyleSheet.create ({
@@ -25,41 +39,5 @@ const styles = StyleSheet.create ({
   }
 })
 
-//export default App;
-//Yina
-// import React, { Component } from "react";
-// import { View, Text, StyleSheet, ScrollView } from "react-native";
-// import BlueButton from "../comps/button";
-// import HomepageText from '../comps/Homepage';
-// import AvailableinText from '../comps/AvailableinText';
-// import FindaTutorText from "../comps/FindaTutorText";
-// import GradientButton from '../comps/GradientButton';
-// import OtherButton from "../comps/OtherButton";
-
-
-// const App = () => {
-//   return (
-//     <ScrollView>
-//     <BlueButton text="hello"/>,
-
-//     <HomepageText text="Homepage"/>,
-
-//     <AvailableinText text="Available in"/>,
-
-//     <FindaTutorText text="Find a Tutor" text2="Choose up to three subjects in which you need help."/>,
-
-//     <GradientButton text="REQUEST TUTORING"/>,
-
-//     <OtherButton text="Other"/>
-//     </ScrollView>
-//   );
-
- 
-
-// };
-
-
-
-// export default App;
-//Yina
-export {default} from './storybook'; 
+export default App;
+//export {default} from './storybook'; 

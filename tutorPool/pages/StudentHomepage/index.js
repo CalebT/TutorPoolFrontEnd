@@ -6,12 +6,17 @@ import SubjectRectangle from '../../comps/SubjectRectangle';
 import HomepageText from '../../comps/Homepage';
 import FindaTutorText from '../../comps/FindaTutorText';
 import NavBar from '../../comps/NavBar';
+import TopNav from '../../comps/TopNav';
 
-const StudentHomepage = ({}) => {
+const StudentHomepage = ({history}) => {
     return <View style={styles.viewCont}>
-        <Image style={styles.logo} source={require('../../images/LogoSmaller.png')} />
+        <View style={styles.topNavBox}>
+            <TopNav onPress1={()=>history.push('/pulloutmenu')}/>
+        </View>
         <HomepageText text="Homepage"></HomepageText>
+        <View style={styles.textBox}>
         <FindaTutorText text="Find a Tutor" text2="Choose up to three subjects for which you need help."></FindaTutorText>
+        </View>
         <View style={styles.selectionBox}>
             <SubjectSquare text="English"/>
             <SubjectSquare text="Geography"/>
@@ -38,14 +43,18 @@ const StudentHomepage = ({}) => {
 const styles=StyleSheet.create({
     viewCont: {
         display:'flex',
+        justifyContent:'center',
         alignItems:'center',
         backgroundColor:'white',
-        marginTop:40.
+        height:750
     },
 
-    logo: {
-        left:75,
-        marginBottom:50,
+    topNavBox: {
+        marginBottom:75 
+    },
+
+    textBox: {
+        width:300
     },
 
     selectionBox: {

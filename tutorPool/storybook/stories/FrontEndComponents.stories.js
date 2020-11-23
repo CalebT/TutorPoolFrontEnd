@@ -29,7 +29,6 @@ import RequestTutoring from '../../comps/RequestTutoring';
 import TopNav from '../../comps/TopNav';
 import SettingsToggle from '../../comps/SettingsToggle';
 import ChatContainerR from '../../comps/ChatContainer';
-import EditButton from '../../comps/EditButton';
 import FindTutorBox from '../../comps/FindTutorBox';
 import Review from '../../comps/Review';
 import NewMsgBox from '../../comps/NewMsgBox';

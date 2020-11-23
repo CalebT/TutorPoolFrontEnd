@@ -11,6 +11,9 @@ import ProfileTutorMyrates from '../../pages/ProfileTutorMyrates';
 import ChatBox from '../../pages/ChatBox';
 import Notifications from '../../pages/Notifications';
 import Messages from '../../pages/Messages';
+import SelectTutorPage from '../../pages/SelectTutorPage';
+import TutorHomepage from '../../pages/TutorHomepage';
+import ProfileTutorSubject from '../../pages/ProfileTutorSubject';
 
 storiesOf('Pages', module)
     .add('Login Page', () => (
@@ -29,7 +32,7 @@ storiesOf('Pages', module)
         <SettingsPage />
     ))
 
-    .add('Find A Tutor', () => (
+    .add('Find A Tutor List', () => (
         <FindTutor />
     ))
 
@@ -52,4 +55,17 @@ storiesOf('Pages', module)
     .add('Messages', () => (
         <Messages />
     ))
+
+    .add('Select Tutor Page', () => (
+        <SelectTutorPage />
+    ))
+
+    .add('Tutor Home Page', () => (
+        <TutorHomepage />
+    ))
+
+    .add('Profile Subject(Tutor)', () => (
+        <ProfileTutorSubject />
+    ))
+
     ;

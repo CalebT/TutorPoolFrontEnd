@@ -107,6 +107,11 @@ const styles=StyleSheet.create({
 
     },
 
+    Find: {
+        fontWeight:"600",
+        fontSize:18,
+    },
+
     subjects: {
         flexDirection:"row",
     }

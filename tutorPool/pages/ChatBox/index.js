@@ -10,9 +10,10 @@ import SmallBubbleButton from '../../comps/SmallBubbleButton';
 import BlueButton from '../../comps/BlueButton';
 import HomepageText from '../../comps/Homepage';
 import MyRatesInput from '../../comps/MyRatesInput';
-import BackStudent from '../../comps/BackStudent';
 import SendChatInput from '../../comps/SendChatInput';
 import ChatContainerR from '../../comps/ChatContainer';
+import { GiftedChat } from 'react-native-gifted-chat';
+import { G } from 'react-native-svg';
 
 const home = require('../../images/home.png');
 const homeactive = require('../../images/home-active.png');
@@ -29,21 +30,12 @@ const icon = require('../../images/icon.png');
 
 const ChatBox = ({}) => {
     return <View style={styles.viewCont}>
-        <TopNav />
-        <View style={styles.navbarBox}>
-        <BackStudent text="Jen Student" />
-        <View style={styles.sender}>
-                    <ChatContainerR text="hello" />
-
-            </View>
-        <View style={styles.Chat}>
-            
-    
-        <SendChatInput />
+        <View style={styles.TopNav}>
+            <TopNav />
         </View>
-        </View>
+        <GiftedChat messages={'hello'} user={'user'}  />
         <View style={styles.NavBar}>
-        <NavBar homeimg={home} messageimg={message} bellimg={bell} userimg={user}/>
+            <NavBar homeimg={home} messageimg={messageactive} bellimg={bell} userimg={user}/>
         </View>
     </View>
 }
@@ -54,32 +46,17 @@ const styles=StyleSheet.create({
         alignItems:"center",
         justifyContent:"center",
         backgroundColor:'white',
-        marginTop:40,
-
     },
 
-    navbarBox: {
-       
-        marginTop:10,
+    TopNav: {
+        marginTop:20
     },
-
-
 
     NavBar: {
+        position: 'absolute',
         marginTop:20,
-        bottom:-400,
+        bottom:-760,
         },
-
-        Chat: {
-           bottom:-400,
-            },
-
-    
-    sender:{
-    marginLeft:130,
-    marginTop:30,
-    }
-
 });
 
 export default ChatBox;

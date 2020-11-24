@@ -1,27 +1,30 @@
 import React from 'react';
-import {View, Image, StyleSheet} from 'react-native';
+import {View, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import propTypes from 'prop-types';
 
-const NavBar = ({homeimg, messageimg, bellimg, userimg}) => {
-
-    
-
+const NavBar = ({homeimg, messageimg, bellimg, userimg, onPress1, onPress2, onPress3, onPress4}) => {
     //const [clicked, setClicked] = useState(false);
 
-    return <View>
-        <View style={styles.navbarContainer}>
-            <Image style={styles.img} source={homeimg}></Image>
-            <Image style={styles.img} source={messageimg}></Image>
-            <Image style={styles.img} source={bellimg}></Image>
-            <Image style={styles.img} source={userimg}></Image>
+    return <View style={styles.navbarContainer}>
+            <TouchableOpacity style={styles.imgBox} onPress={onPress1}>
+                <Image style={styles.img} source={homeimg}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.imgBox} onPress={onPress2}>
+                <Image style={styles.img} source={messageimg}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.imgBox} onPress={onPress3}>
+                <Image style={styles.img} source={bellimg} ></Image>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.imgBox} onPress={onPress4}>
+                <Image style={styles.img} source={userimg}></Image>
+            </TouchableOpacity>
         </View>
-    </View>
 }
 
 const styles=StyleSheet.create({
     navbarContainer: {
-        backgroundColor:"#F4F5F5",
-        width: 360,
+        backgroundColor:"white",
+        width: 400,
         height: 60,
         display:"flex",
         justifyContent:"space-between",
@@ -29,6 +32,11 @@ const styles=StyleSheet.create({
         flexDirection: "row",
         padding: 30
 
+    },
+
+    imgBox: {
+        width:50,
+        height:40
     },
 
     img: {
@@ -42,7 +50,11 @@ NavBar.defaultprops = {
     messageimg: "", 
     bellimg: "", 
     userimg: "",
-    source:"placeholder"
+    source:"placeholder",
+    onPress1:()=>{},
+    onPress2:()=>{},
+    onPress3:()=>{},
+    onPress4:()=>{},
 }
 
 NavBar.propTypes = {

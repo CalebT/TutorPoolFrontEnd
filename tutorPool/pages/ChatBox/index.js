@@ -28,35 +28,38 @@ const icon = require('../../images/icon.png');
 
 
 
-const ChatBox = ({}) => {
+const ChatBox = ({history}) => {
     return <View style={styles.viewCont}>
-        <View style={styles.TopNav}>
-            <TopNav />
+        <View style={styles.topNavBox}>
+            <TopNav onPress1={()=>history.push('/pulloutmenu')}/>
         </View>
-        <GiftedChat messages={'hello'} user={'user'}  />
-        <View style={styles.NavBar}>
-            <NavBar homeimg={home} messageimg={messageactive} bellimg={bell} userimg={user}/>
+        <View style={styles.maincontBox}>
+            <GiftedChat/>
+        </View>
+        <View style={styles.navbarBox}>
+            <NavBar homeimg={home} messageimg={messageactive} bellimg={bell} userimg={user} onPress1={()=>history.push('/studenthomepage')} onPress2={()=>history.push('/studentmessages')} onPress3={()=>history.push('/Notifications')} onPress4={()=>history.push('/profilestudent')}/>
         </View>
     </View>
 }
 
 const styles=StyleSheet.create({
     viewCont: {
-        display:"flex",
-        alignItems:"center",
-        justifyContent:"center",
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
         backgroundColor:'white',
+        height:'100%'
+    },
+    topNavBox: {
+        position:'absolute',
+        marginBottom:75 ,
+        top:10
     },
 
-    TopNav: {
-        marginTop:20
-    },
-
-    NavBar: {
-        position: 'absolute',
-        marginTop:20,
-        bottom:-760,
-        },
+    navbarBox: {
+        position:'absolute',
+        bottom:0,
+    }
 });
 
 export default ChatBox;

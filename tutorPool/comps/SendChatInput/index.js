@@ -10,7 +10,7 @@ const SendChatInput = ({name}) => {
        
         <TextInput placeholder="Ask your question..." TextEntry={true} style={styles.inputBox}/>
         <TouchableOpacity style={styles.Button}>
-        <Image source={require('../../images/chatbutton.png')}></Image>
+            <Image source={require('../../images/chatbutton.png')}></Image>
         </TouchableOpacity>
     </View>
 }

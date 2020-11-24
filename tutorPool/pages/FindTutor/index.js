@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, ScrollView} from 'react-native';
 import NavBar from '../../comps/NavBar';
 import TopNav from '../../comps/TopNav';
 import UserCard from '../../comps/UserCard';
@@ -24,75 +24,89 @@ const user = require('../../images/user.png');
 const useractive = require('../../images/user-active.png');
 const icon = require('../../images/icon.png');
 
+const Becca = require('../../images/becca.png');
+const Anna = require('../../images/Anna.png');
+const Elizabeth = require('../../images/Elizabeth.png');
+const Ryan = require('../../images/Ryan.png');
 
 
-
-const FindTutor = ({}) => {
+const FindTutor = ({history}) => {
     return <View style={styles.viewCont}>
-        <TopNav />
-        <View style={styles.Top}>
-         <Text style={styles.Find}>Find A Tutor</Text>
-            <View style={styles.subjects}>
+        <View style={styles.topNavBox}>
+            <TopNav onPress1={()=>history.push('/pulloutmenu')}/>
+        </View>
+        <View style={styles.maincontBox}>
+            <Text style={styles.text}>Find a Tutor</Text>
+            <View style={styles.subSelect}>
                 <BlueSubjectText text="English"/>
-                <BlueSubjectText text="Art"/>
-             </View>
+                <BlueSubjectText text="Science"/>
+            </View>
+            <View style={styles.tutorBox}>
+                <ScrollView style={styles.scrollStyle}>
+                    <UserCard text1="Becca Williams" text2="English, Science, Art" profilePic={Becca}/>
+                    <UserCard text1="Anna Smith" text2="English, Science, Geography" profilePic={Anna}/>
+                    <UserCard text1="Elizabeth Taylor" text2="Science, Art, History" profilePic={Elizabeth}/>
+                    <UserCard text1="Ryan Philips" text2="English, French" profilePic={Ryan}/>
+                    <UserCard text1="Ronald Lopez" text2="Science, Math" profilePic={icon}/>
+                </ScrollView>
+            </View>
         </View>
         <View style={styles.navbarBox}>
-        <View style={styles.User}>
-        <FindTutorBox text1="Becca Williams" text2="English, Art" text3="4.5"/>
-        </View>
-        </View>
-
-        <View style={styles.navbarBox}>
-        <View style={styles.User}>
-        <FindTutorBox text1="Anna Smith" text2="English, Art, History" text3="5.0"/>
-        </View>
-        </View>
-
-
-        <View style={styles.NavBar}>
-        <NavBar homeimg={home} messageimg={message} bellimg={bell} userimg={user}/>
+            <NavBar homeimg={homeactive} messageimg={message} bellimg={bell} userimg={user} onPress1={()=>history.push('/studenthomepage')} onPress2={()=>history.push('/studentmessages')} onPress3={()=>history.push('/Notifications')} onPress4={()=>history.push('/profilestudent')}/>
         </View>
     </View>
 }
 
 const styles=StyleSheet.create({
     viewCont: {
-        display:"flex",
-        alignItems:"center",
-        justifyContent:"center",
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
         backgroundColor:'white',
-        marginTop:40,
-
+        height:'100%'
     },
 
-    User: {
+    topNavBox: {
+        position:'absolute',
+        marginBottom:75 ,
+        top:10
+    },
 
-    marginTop:20,
+    maincontBox: {
+        width:'90%',
+        height:'90%',
+    },
+
+    text: {
+        fontSize:22,
+        fontWeight:'bold',
+        marginTop:30,
+        marginLeft:30,
+    },
+
+    subSelect: {
+        display:'flex',
+        flexDirection:'row',
+        marginLeft:8,
+        marginTop:10
+    },
+
+    tutorBox:{
+        display:'flex',
+        alignItems:'center',
+        width:'100%',
+        marginLeft:'2.5%',
+        height:'75%',
+    },
+
+    scrollStyle:{
+        height:'71%',
+        width:'100%',
     },
 
     navbarBox: {
-       
-        marginTop:10,
-        marginLeft:20,
-    },
-
-
-    NavBar: {
-        marginTop:20,
-        bottom:-250,
-    },
-
-    Top :{
-        display:"flex",
-        marginTop:30,
-        marginRight:200,
-
-    },
-
-    Find: {
-        fontWeight:"600",
-        fontSize:18,
+        position:'absolute',
+        bottom:0,  
     },
 
     subjects: {

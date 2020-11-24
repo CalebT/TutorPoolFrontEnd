@@ -32,7 +32,7 @@ const RegisterPage = ({history}) => {
         </View>
 
         <View style={styles.buttonBox}>
-            <BlueButton style={styles.buttonBox} text="REGISTER" onPress={()=>history.push('/studenthomepage')}></BlueButton>
+            <BlueButton style={styles.buttonBox} text="REGISTER" onPress={()=>history.push('/tutorhomepage')}></BlueButton>
         </View>
         
         <View style={styles.backBox}>

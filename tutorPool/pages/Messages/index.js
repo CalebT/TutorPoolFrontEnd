@@ -23,49 +23,51 @@ const useractive = require('../../images/user-active.png');
 const icon = require('../../images/icon.png');
 
 
-
-
 const Messages = ({history}) => {
     return <View style={styles.viewCont}>
-        <TopNav onPress1={()=>history.push('/pulloutmenu')}/>
+        <View style={styles.topNavBox}>
+            <TopNav onPress1={()=>history.push('/pulloutmenu')}/>
+        </View>
+        <View style={styles.maincontBox}>
+            <HomepageText text="Messages" />
+            <View style={styles.User}>
+                <NewMsgBox text1="Bob Student" text2="Got it! thank you! See you..." text3="3 hours ago" onPress={()=>history.push('/chatbox')}/>
+            </View>
+        </View>
         <View style={styles.navbarBox}>
-        <HomepageText text="Messages" />
-        <View style={styles.User}>
-        <NewMsgBox text1="Bob Student" text2="Got it! thank you! See you..." text3="3 hours ago"/>
-        </View>
-        </View>
-        <View style={styles.NavBar}>
-        <NavBar homeimg={home} messageimg={message} bellimg={bell} userimg={user}/>
+            <NavBar homeimg={home} messageimg={messageactive} bellimg={bell} userimg={user} onPress1={()=>history.push('/studenthomepage')} onPress2={()=>history.push('/studentmessages')} onPress3={()=>history.push('/Notifications')} onPress4={()=>history.push('/profilestudent')}></NavBar>
         </View>
     </View>
 }
 
 const styles=StyleSheet.create({
     viewCont: {
-        display:"flex",
-        alignItems:"center",
-        justifyContent:"center",
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
         backgroundColor:'white',
-        marginTop:40,
+        height:'100%'
+    },
 
+    maincontBox: {
+        position:'absolute',
+        top:'10%',
     },
 
     User: {
-
-marginTop:20,
-},
-    navbarBox: {
-       
-        marginTop:10,
-        marginLeft:20,
+        marginTop:15
     },
 
+    topNavBox: {
+        position:'absolute',
+        marginBottom:75 ,
+        top:10
+    },
 
-    NavBar: {
-        marginTop:20,
-        bottom:-410,
+    navbarBox: {
+        position:'absolute',
+        bottom:0,
     }
-
 });
 
 export default Messages;

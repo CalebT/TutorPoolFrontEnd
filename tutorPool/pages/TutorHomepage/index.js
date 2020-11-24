@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, ScrollView} from 'react-native';
 import NavBar from '../../comps/NavBar';
 import TopNav from '../../comps/TopNav';
 import UserCard from '../../comps/UserCard';
@@ -25,58 +25,79 @@ const user = require('../../images/user.png');
 const useractive = require('../../images/user-active.png');
 const icon = require('../../images/icon.png');
 
+const Becca = require('../../images/becca.png');
 
 
 
-const TutorHomepage = ({}) => {
+const TutorHomepage = ({history}) => {
     return <View style={styles.viewCont}>
-        <TopNav />
-        <View style={styles.back}> 
-        <HomepageText text="Homepage" />
+        <View style={styles.topNavBox}>
+            <TopNav onPress1={()=>history.push('/pulloutmenu')}/>
         </View>
 
-        <View style={styles.Box}>
-            <View style={styles.TutorInfo}>
-                <View style={styles.tutor}>
-                <UserCard text1="Becca Williams" text2="English Art" />
+
+        <ScrollView style={styles.scrollView}>
+            <View style={styles.title}>
+                <HomepageText text="Homepage" />
+            </View>
+       
+            <View style={styles.Box}>
+                <View style={styles.TutorInfo}>
+                    <View style={styles.tutor}>
+                    <UserCard text1="Becca Williams" text2="English Art" profilePic={Becca}/>
+                    </View>
+                <About text="Hi! My name is Becca Williams and I am a tutor. I have always tutored when I was at school and specia-lize in English and Arts. Let’s learn together!"/>
+                <Rates text1="Free" text2="$20" text3="$30"/>
                 </View>
-            <About text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
-            <Rates text1="Free" text2="$20" text3="$30"/>
+
+            <View style={styles.Avail}>
+                <SmallBubbleButton text="Video Calls"/>
+                <SmallBubbleButton text="In-Person"/>
+            </View>
             </View>
 
-        <View style={styles.Avail}>
-             <SmallBubbleButton text="Video Calls"/>
-            <SmallBubbleButton text="In-Person"/>
-        </View>
-        </View>
+            <View style={styles.Review}>
+                <Review text1="Writing essays has never been easy for our daughter, but you have managed to help her out. She is more confident when it comes [...]" text2="Bob Smith" text3="5.0"/>
+            </View>
 
-        <View style={styles.NavBar}>
-            <NavBar homeimg={home} messageimg={message} bellimg={bell} userimg={user}/>
+            <View style={styles.buttonBox}>
+                <BlueButton text="Request Tutoring"/>
+            </View>
+        </ScrollView>
+        
+
+        <View style={styles.navbarBox}>
+            <NavBar homeimg={homeactive} messageimg={message} bellimg={bell} userimg={user} onPress1={()=>history.push('/studenthomepage')} onPress2={()=>history.push('/studentmessages')} onPress3={()=>history.push('/Notifications')} onPress4={()=>history.push('/profiletutor')}></NavBar>
         </View>
-        <View style={styles.Review}>
-            <Review text1="Writing essays has never been easy for our daughter, but you have managed to help her out. She is more confident when it comes [...]" text2="Bob Smith" text3="5.0"/>
-            <BlueButton text="Request Tutoring"/>
-        </View>
+    
     </View>
 }
 
 const styles=StyleSheet.create({
     viewCont: {
-        display:"flex",
-        alignItems:"center",
-        justifyContent:"center",
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
         backgroundColor:'white',
-        marginTop:40,
-
+        height:750
     },
 
-    back: {
-        marginRight:230,
-        marginTop:10,
+    topNavBox: {
+        position:'absolute',
+        marginBottom:75 ,
+        top:10
+    },
+
+    title: {
+        left:25
+    },
+
+    maincontBox: {
+        position:'absolute',
+        top:'10%',
     },
 
     Box: {
-       
         marginTop:20,
         paddingBottom:15,
         backgroundColor:"#FFF",
@@ -94,8 +115,7 @@ const styles=StyleSheet.create({
     },
 
     tutor:{
-        marginLeft:55,
-
+        display:'flex',
     },
 
     TutorInfo: {
@@ -104,17 +124,22 @@ const styles=StyleSheet.create({
    
     },
 
+    scrollView: {
+        height:'81%',
+        width:'95%',
+        position:'absolute',
+        top:'10%',
+    }, 
 
-    NavBar: {
-        marginTop:20,
-        bottom:-200,
+    navbarBox: {
+        position:'absolute',
+        bottom:10,
     },
 
     Avail: {
         width: 300,
         flexDirection:"row",
         alignItems:"center",
-        justifyContent: "center",
         justifyContent:"space-evenly",
         margin: 20,
     },
@@ -124,10 +149,16 @@ const styles=StyleSheet.create({
     },
 
     Review: {
-       marginTop:-50,
-        
+        marginTop:-10,
+        marginBottom:10,
+        display:'flex',
+        alignItems:'center',
     },
 
+    buttonBox: {
+        display:'flex',
+        alignItems:'center'
+    }
 
 
 });

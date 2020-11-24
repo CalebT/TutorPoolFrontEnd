@@ -22,30 +22,34 @@ const user = require('../../images/user.png');
 const useractive = require('../../images/user-active.png');
 const icon = require('../../images/icon.png');
 
+const userimg = require('../../images/pattern.png');
 
 
-
-const ProfileTutor = ({history}) => {
+const ProfileStudent = ({history}) => {
     return <View style={styles.viewCont}>
         <View style={styles.topNavBox}>
             <TopNav onPress1={()=>history.push('/pulloutmenu')}/>
         </View>
+        <View style={styles.maincontBox}>
+            <View style={styles.userinfo}>
+                <View style={styles.title}>
+                    <HomepageText text="Profile" />
+                </View>
+                <View style={styles.UserPic}>
+                    <Image source={userimg}/>
+                </View>
+                <Text style={styles.studentname}>Student Name</Text>
+                <Text style={styles.usertype}>Student</Text>
+            </View>
+            
+
+            <View style={styles.infoCont}>
+                <Text style={styles.textStyle}>Personal Information</Text>
+            </View>
+
+        </View>
         <View style={styles.navbarBox}>
-        <HomepageText text="Profile" />
-        <View style={styles.User}>
-        <EditProfile text1="Becca Williams" text2="English, Art"/>
-        </View>
-        </View>
-        <AboutInput name="About Me" />
-        <View style={styles.Rates}><Rates text1="Free" text2="$20" text3="$30"/></View>
-        <View style={styles.Avail}>
-        <View style={styles.AvailText}><AvailableinText text="Available in"/></View>
-        <SmallBubbleButton text="Video Calls"/>
-        <SmallBubbleButton text="In-Person"/>
-        </View>
-        <BlueButton text="Update"/>
-        <View style={styles.navbarBox}>
-            <NavBar homeimg={homeactive} messageimg={message} bellimg={bell} userimg={user} onPress1={()=>history.push('/studenthomepage')} onPress2={()=>history.push('/studentmessages')} onPress3={()=>history.push('/Notifications')} onPress4={()=>history.push('/profiletutor')}></NavBar>
+            <NavBar homeimg={homeactive} messageimg={message} bellimg={bell} userimg={user} onPress1={()=>history.push('/studenthomepage')} onPress2={()=>history.push('/studentmessages')} onPress3={()=>history.push('/Notifications')} onPress4={()=>history.push('/profilestudent')}></NavBar>
         </View>
     </View>
 }
@@ -59,10 +63,48 @@ const styles=StyleSheet.create({
         height:'100%'
     },
     
-    User: {
+    maincontBox: {
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        top:-10
+    },
 
-    marginTop:20,
-    marginRight:130,
+    userinfo: {
+        display:'flex'
+    }, 
+
+    title: {
+        position:'relative',
+        left:'-30%'
+    },
+
+    UserPic: {
+        position:'relative',
+        marginTop:15
+    },
+
+    studentname: {
+        margin:15,
+        fontWeight:'bold',
+        fontSize:22,
+    },
+
+    usertype: {
+        fontSize:18
+    },
+
+    infoCont:{
+        display:'flex',
+        flexDirection:'column',
+    },
+
+
+    textStyle: {
+        fontWeight:'bold',
+        fontSize:18,
+
+
     },
 
     topNavBox: {
@@ -93,4 +135,4 @@ const styles=StyleSheet.create({
 
 });
 
-export default ProfileTutor;
+export default ProfileStudent;

@@ -2,11 +2,11 @@ import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import propTypes from 'prop-types';
 
-const UserCard = ({text1, text2, defaultImg, beccaProfile}) => {
+const UserCard = ({text1, text2, profilePic}) => {
     return <View style={styles.compCont}>
         <TouchableOpacity style={styles.buttonBox}>
             <View style={styles.imageCont}>
-                <Image style={styles.image} source={defaultImg}></Image>
+                <Image style={styles.image} source={profilePic}></Image>
             </View>
             <Text style={styles.name}>{text1}</Text>
             <Text style={styles.description}>{text2}</Text>
@@ -19,7 +19,8 @@ const UserCard = ({text1, text2, defaultImg, beccaProfile}) => {
 
 const styles=StyleSheet.create({
     compCont:{
-        margin:10
+        margin:10,
+        paddingLeft:25,
     },
 
     buttonBox: {
@@ -52,10 +53,10 @@ const styles=StyleSheet.create({
     imageCont: {
         position:"absolute",
         left:-30,
+        bottom:12,
         width:60,
         height:60,
         borderRadius:50,
-        backgroundColor:"white",
     },
 
     image: {
@@ -66,15 +67,14 @@ const styles=StyleSheet.create({
 
     clipCont: {
         position:'absolute',
-        right:-30
+        right:-30,
     }
 });
 
 UserCard.defaultProps = {
     text1:"Default",
     text2:"Default",
-    defaultImg:require('../../images/icon.png'),
-    beccaProfile:require('../../images/becca.png'),
+    profilePic: "",
 
 }
 

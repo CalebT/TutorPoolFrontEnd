@@ -28,37 +28,51 @@ const icon = require('../../images/icon.png');
 
 const Notifications = ({history}) => {
     return <View style={styles.viewCont}>
-        <TopNav onPress1={()=>history.push('/pulloutmenu')}/>
-        <View style={styles.navbarBox}>
-        <HomepageText text="Notifications" />
-        <View style={styles.Box}>
-        <NewMsgBox text1="Bob Student" text2="Requested 1st Meeting" text3="3 hours ago"/>
-        </View>
-        <View style={styles.Box}>
-        <NewReviewBox text1="Jen Student" text2="User has wrote down review." text3="3 hours ago" />
+        <View style={styles.topNavBox}>
+            <TopNav onPress1={()=>history.push('/pulloutmenu')}/>
         </View>
 
-        
+        <View style={styles.maincontBox}>
+            <HomepageText text="Notifications" />
+            <View style={styles.notifCont}>
+                <NewMsgBox text1="Bob Student" text2="Requested 1st Meeting" text3="3 hours ago"/>
+            </View>
+            <View style={styles.notifCont}>
+                <NewReviewBox text1="Jen Student" text2="User has wrote down review." text3="3 hours ago" />
+            </View>
+            <View style={styles.notifCont}>
+                <NewReviewBox text1="Jen Student" text2="User has wrote down review." text3="3 hours ago" />
+            </View>
         </View>
-        <View style={styles.NavBar}>
-        <NavBar homeimg={home} messageimg={message} bellimg={bell} userimg={user}/>
+
+        <View style={styles.navbarBox}>
+            <NavBar homeimg={home} messageimg={message} bellimg={bellactive} userimg={user} onPress1={()=>history.push('/studenthomepage')} onPress2={()=>history.push('/studentmessages')} onPress3={()=>history.push('/Notifications')} onPress4={()=>history.push('/profilestudent')}/>
         </View>
     </View>
 }
 
 const styles=StyleSheet.create({
     viewCont: {
-        display:"flex",
-        alignItems:"center",
-        justifyContent:"center",
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
         backgroundColor:'white',
-        marginTop:40,
-
+        height:'100%'
     },
 
-    Box: {
+    topNavBox: {
+        position:'absolute',
+        marginBottom:75 ,
+        top:10
+    },
 
-    marginTop:20,
+    maincontBox: {
+        position:'absolute',
+        top:'10%',
+    },
+
+    notifCont: {
+        marginTop:15
     },
 
     navbarBox: {
@@ -67,10 +81,9 @@ const styles=StyleSheet.create({
         marginLeft:20,
     },
 
-
-    NavBar: {
-        marginTop:20,
-        bottom:-350,
+    navbarBox: {
+        position:'absolute',
+        bottom:0,
     }
 
 });

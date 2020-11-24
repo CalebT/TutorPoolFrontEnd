@@ -4,7 +4,7 @@ import {View, Text, Image, StyleSheet} from 'react-native';
 
 const PullOutMenu = ({history}) => {
     return <View style={styles.viewCont}>
-        <View onPress={()=>history.goBack()}>
+        <View onPress={()=>props.history.goBack()}>
             <Image style={styles.close} source={require('../../images/whiteCloseCircle.png')} />
         </View>
         <View style={styles.selectionBox}>

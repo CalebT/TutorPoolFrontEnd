@@ -17,6 +17,9 @@ import Notifications from './pages/Notifications';
 import ChatBox from './pages/ChatBox';
 import FindTutor from './pages/FindTutor';
 import ProfileTutor from './pages/ProfileTutor';
+import TutorHomepage from './pages/TutorHomepage';
+import ProfileStudent from './pages/ProfileStudent';
+
 
 import { NativeRouter, Route, Link, Switch} from 'react-router-native';
 
@@ -33,6 +36,9 @@ const App = () => {
           <Route exact path='/studentmessages' component={Messages}/>
           <Route exact path='/notifications' component={Notifications}/>
           <Route exact path='/profiletutor' component={ProfileTutor}/>
+          <Route exact path='/tutorhomepage' component={TutorHomepage}/>
+          <Route exact path='/chatbox' component={ChatBox}/>
+          <Route exact path='/profilestudent' component={ProfileStudent}/>
         </Switch>
       </View>
     </NativeRouter>
@@ -48,5 +54,5 @@ const styles = StyleSheet.create ({
   }
 })
 
-//export default App;
-export {default} from './storybook'; 
+export default App;
+//export {default} from './storybook'; 

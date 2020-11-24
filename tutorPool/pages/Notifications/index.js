@@ -23,9 +23,6 @@ const user = require('../../images/user.png');
 const useractive = require('../../images/user-active.png');
 const icon = require('../../images/icon.png');
 
-
-
-
 const Notifications = ({history}) => {
     return <View style={styles.viewCont}>
         <View style={styles.topNavBox}>
@@ -35,7 +32,7 @@ const Notifications = ({history}) => {
         <View style={styles.maincontBox}>
             <HomepageText text="Notifications" />
             <View style={styles.notifCont}>
-                <NewMsgBox text1="Bob Student" text2="Requested 1st Meeting" text3="3 hours ago"/>
+                <NewMsgBox text1="Bob Student" text2="Requested 1st Meeting" text3="3 hours ago" profilePic={icon}/>
             </View>
             <View style={styles.notifCont}>
                 <NewReviewBox text1="Jen Student" text2="User has wrote down review." text3="3 hours ago" />

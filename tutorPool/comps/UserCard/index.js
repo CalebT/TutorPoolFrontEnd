@@ -2,9 +2,9 @@ import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import propTypes from 'prop-types';
 
-const UserCard = ({text1, text2, profilePic}) => {
+const UserCard = ({text1, text2, profilePic, onPress}) => {
     return <View style={styles.compCont}>
-        <TouchableOpacity style={styles.buttonBox}>
+        <TouchableOpacity style={styles.buttonBox} onPress={onPress}>
             <View style={styles.imageCont}>
                 <Image style={styles.image} source={profilePic}></Image>
             </View>
@@ -75,6 +75,7 @@ UserCard.defaultProps = {
     text1:"Default",
     text2:"Default",
     profilePic: "",
+    onPress:()=>{},
 
 }
 

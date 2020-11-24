@@ -31,12 +31,12 @@ const StudentHomepage = ({history}) => {
             <View style={styles.selectionBox}>
                 <SubjectSquare text="English"/>
                 <SubjectSquare text="Geography"/>
-                <SubjectSquare text="History"/>
+                <SubjectSquare text="Science"/>
             </View>
             <View style={styles.selectionBox}>
                 <SubjectSquare text="Math"/>
                 <SubjectSquare text="Geography"/>
-                <SubjectSquare text="History"/>
+                <SubjectSquare text="Coding"/>
             </View>
             <View style={styles.selectionBox}>
                 <SubjectRectangle text="English"/>

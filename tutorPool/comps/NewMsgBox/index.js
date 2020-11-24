@@ -2,11 +2,12 @@ import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import propTypes from 'prop-types';
 
-const NewMsgBox = ({text1, text2, text3, imgsrc, onPress}) => {
+
+const NewMsgBox = ({text1, text2, text3, profilePic, onPress}) => {
     return <View >
         <TouchableOpacity style={styles.buttonBox} onPress={onPress}>
             <View style={styles.imageCont}>
-                <Image style={styles.image} source={imgsrc}></Image>
+                <Image style={styles.image} source={profilePic}></Image>
             </View>
 
             <View style={styles.title}>
@@ -54,7 +55,6 @@ const styles=StyleSheet.create({
     image: {
         resizeMode:'contain',
         maxWidth:60,
-        top:-10,
     },
 
     title: {
@@ -91,8 +91,7 @@ NewMsgBox.defaultProps = {
     text1:"Default",
     text2:"Default",
     text3:"Default",
-    source:"placeholder",
-    imgsrc:require('../../images/icon.png'),
+    profilePic:'',
     onPress:()=>{}
 }
 

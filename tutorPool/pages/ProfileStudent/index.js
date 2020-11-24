@@ -2,15 +2,8 @@ import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
 import NavBar from '../../comps/NavBar';
 import TopNav from '../../comps/TopNav';
-import UserCard from '../../comps/UserCard';
-import AboutInput from '../../comps/AboutInput';
-import Rates from '../../comps/Rates';
-import AvailableinText from '../../comps/AvailableinText';
-import SmallBubbleButton from '../../comps/SmallBubbleButton';
-import BlueButton from '../../comps/BlueButton';
 import HomepageText from '../../comps/Homepage';
-import MyRatesInput from '../../comps/MyRatesInput';
-import EditProfile from '../../comps/EditProfile';
+
 
 const home = require('../../images/home.png');
 const homeactive = require('../../images/home-active.png');
@@ -45,11 +38,17 @@ const ProfileStudent = ({history}) => {
 
             <View style={styles.infoCont}>
                 <Text style={styles.textStyle}>Personal Information</Text>
+                <View>
+                    <Text>Email</Text>
+                    <View style={styles.inputBox}><Text>exampleEmail@gmail.com</Text></View>
+                    <Text>Password</Text>
+                    <View style={styles.inputBox}><Text>**********</Text></View>
+                </View>
             </View>
 
         </View>
         <View style={styles.navbarBox}>
-            <NavBar homeimg={homeactive} messageimg={message} bellimg={bell} userimg={user} onPress1={()=>history.push('/studenthomepage')} onPress2={()=>history.push('/studentmessages')} onPress3={()=>history.push('/Notifications')} onPress4={()=>history.push('/profilestudent')}></NavBar>
+            <NavBar homeimg={home} messageimg={message} bellimg={bell} userimg={useractive} onPress1={()=>history.push('/studenthomepage')} onPress2={()=>history.push('/studentmessages')} onPress3={()=>history.push('/Notifications')} onPress4={()=>history.push('/profilestudent')}></NavBar>
         </View>
     </View>
 }
@@ -71,7 +70,8 @@ const styles=StyleSheet.create({
     },
 
     userinfo: {
-        display:'flex'
+        display:'flex',
+        alignItems:'center'
     }, 
 
     title: {
@@ -81,11 +81,12 @@ const styles=StyleSheet.create({
 
     UserPic: {
         position:'relative',
-        marginTop:15
+        marginTop:15,
+        marginBottom:15,
     },
 
     studentname: {
-        margin:15,
+        margin:10,
         fontWeight:'bold',
         fontSize:22,
     },
@@ -97,13 +98,14 @@ const styles=StyleSheet.create({
     infoCont:{
         display:'flex',
         flexDirection:'column',
+        marginTop: 30
     },
 
 
     textStyle: {
         fontWeight:'bold',
         fontSize:18,
-
+        marginBottom:15,
 
     },
 
@@ -118,17 +120,16 @@ const styles=StyleSheet.create({
         bottom:0,
     },
 
-    Avail: {
-        width: 300,
-        flexDirection:"row",
-        alignItems:"center",
-        justifyContent: "center",
-        justifyContent:"space-evenly",
-        margin: 30,
-    },
-
-    Rates: {
-        marginTop:10,
+    inputBox: {
+        width:300,
+        height:50,
+        borderRadius:10,
+        backgroundColor:'#F4F5F5',
+        display:'flex',
+        justifyContent:'center',
+        paddingLeft:15,
+        marginBottom:20,
+        marginTop:5
     }
 
   

@@ -11,8 +11,7 @@ const PullOutMenu = ({history}) => {
             <Text style={styles.fontStyle} onPress={()=>history.push('/studenthomepage')}>Homepage</Text>
             <Text style={styles.fontStyle} onPress={()=>history.push('/studentmessages')}>Messages</Text>
             <Text style={styles.fontStyle} onPress={()=>history.push('/Notifications')}>Notifications</Text>
-            <Text style={styles.fontStyle} onPress={()=>history.push('/profiletutor')}>Profile</Text>
-            <Text style={styles.fontStyle} onPress={()=>history.push('/studenthomepage')}>Payment</Text>
+            <Text style={styles.fontStyle} onPress={()=>history.push('/profilestudent')}>Profile</Text>
         </View>
         <Text style={styles.signout} onPress={() => history.push('/')}>Sign Out</Text>
         <Image style={styles.logo} source={require('../../images/LogoWhite.png')} />

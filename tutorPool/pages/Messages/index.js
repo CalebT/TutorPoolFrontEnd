@@ -22,6 +22,7 @@ const user = require('../../images/user.png');
 const useractive = require('../../images/user-active.png');
 const icon = require('../../images/icon.png');
 
+const Becca = require('../../images/becca.png');
 
 const Messages = ({history}) => {
     return <View style={styles.viewCont}>
@@ -31,7 +32,7 @@ const Messages = ({history}) => {
         <View style={styles.maincontBox}>
             <HomepageText text="Messages" />
             <View style={styles.User}>
-                <NewMsgBox text1="Bob Student" text2="Got it! thank you! See you..." text3="3 hours ago" onPress={()=>history.push('/chatbox')}/>
+                <NewMsgBox text1="Becca Williams" text2="Got it! thank you! See you..." text3="3 hours ago" profilePic={Becca} onPress={()=>history.push('/chatbox')}/>
             </View>
         </View>
         <View style={styles.navbarBox}>

@@ -43,7 +43,7 @@ const FindTutor = ({history}) => {
             </View>
             <View style={styles.tutorBox}>
                 <ScrollView style={styles.scrollStyle}>
-                    <UserCard text1="Becca Williams" text2="English, Science, Art" profilePic={Becca}/>
+                    <UserCard text1="Becca Williams" text2="English, Science, Art" profilePic={Becca} onPress={()=>history.push('/chatbox')}/>
                     <UserCard text1="Anna Smith" text2="English, Science, Geography" profilePic={Anna}/>
                     <UserCard text1="Elizabeth Taylor" text2="Science, Art, History" profilePic={Elizabeth}/>
                     <UserCard text1="Ryan Philips" text2="English, French" profilePic={Ryan}/>

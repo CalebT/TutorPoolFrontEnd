@@ -50,19 +50,19 @@ const styles=StyleSheet.create({
         height:'100%'
     },
 
+    topNavBox: {
+        position:'absolute',
+        marginBottom:'10%' ,
+        top:'2%'
+    },
+
     maincontBox: {
         position:'absolute',
         top:'10%',
     },
 
     User: {
-        marginTop:15
-    },
-
-    topNavBox: {
-        position:'absolute',
-        marginBottom:75 ,
-        top:10
+        marginTop:'10%'
     },
 
     navbarBox: {

@@ -62,12 +62,17 @@ const styles=StyleSheet.create({
         height:'100%'
     },
     
-    maincontBox: {
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
-        top:-10
+    topNavBox: {
+        position:'absolute',
+        marginBottom:'10%' ,
+        top:'2%'
     },
+
+    maincontBox: {
+        position:'absolute',
+        top:'10%',
+    },
+
 
     userinfo: {
         display:'flex',
@@ -81,12 +86,12 @@ const styles=StyleSheet.create({
 
     UserPic: {
         position:'relative',
-        marginTop:15,
-        marginBottom:15,
+        marginTop:'7%',
+        marginBottom:'7%',
     },
 
     studentname: {
-        margin:10,
+        margin:'2%',
         fontWeight:'bold',
         fontSize:22,
     },
@@ -98,21 +103,15 @@ const styles=StyleSheet.create({
     infoCont:{
         display:'flex',
         flexDirection:'column',
-        marginTop: 30
+        marginTop:'5%'
     },
 
 
     textStyle: {
         fontWeight:'bold',
         fontSize:18,
-        marginBottom:15,
+        marginBottom:'5%',
 
-    },
-
-    topNavBox: {
-        position:'absolute',
-        marginBottom:75 ,
-        top:10
     },
 
     navbarBox: {
@@ -127,9 +126,9 @@ const styles=StyleSheet.create({
         backgroundColor:'#F4F5F5',
         display:'flex',
         justifyContent:'center',
-        paddingLeft:15,
-        marginBottom:20,
-        marginTop:5
+        paddingLeft:'5%',
+        marginBottom:'8%',
+        marginTop:'3%'
     }
 
   

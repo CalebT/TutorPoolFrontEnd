@@ -59,8 +59,8 @@ const styles=StyleSheet.create({
 
     topNavBox: {
         position:'absolute',
-        marginBottom:75 ,
-        top:10
+        marginBottom:'10%' ,
+        top:'2%'
     },
 
     maincontBox: {
@@ -69,15 +69,9 @@ const styles=StyleSheet.create({
     },
 
     notifCont: {
-        marginTop:15
+        marginTop:'7%'
     },
-
-    navbarBox: {
-       
-        marginTop:10,
-        marginLeft:20,
-    },
-
+    
     navbarBox: {
         position:'absolute',
         bottom:0,

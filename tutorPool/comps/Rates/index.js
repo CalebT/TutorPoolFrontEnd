@@ -8,24 +8,24 @@ const Rates = ({ text1, text2, text3, imgsrc }) => {
         <View>
             <Text style={styles.MyRates}>My Rates</Text>
             <View style={styles.Rates}>
-            <TouchableOpacity style={styles.Box}>
-            <TouchableOpacity style={styles.Free}><Text style={styles.Txt}>{text1}</Text>
-            </TouchableOpacity>
+            <View style={styles.Box}>
+            <View style={styles.Free}><Text style={styles.Txt}>{text1}</Text>
+            </View>
             <Text>1st Meeting</Text>
-            </TouchableOpacity>
+            </View>
 
 
-            <TouchableOpacity style={styles.Box}>
-            <TouchableOpacity style={styles.Circle}><Text style={styles.Txt}>{text2}</Text>
-            </TouchableOpacity>
+            <View style={styles.Box}>
+            <View style={styles.Circle}><Text style={styles.Txt}>{text2}</Text>
+            </View>
             <Text>30 Mins</Text>
-            </TouchableOpacity>
+            </View>
 
-            <TouchableOpacity style={styles.Box}>
-            <TouchableOpacity style={styles.Circle}><Text style={styles.Txt}>{text3}</Text>
-            </TouchableOpacity>
+            <View style={styles.Box}>
+            <View style={styles.Circle}><Text style={styles.Txt}>{text3}</Text>
+            </View>
             <Text>1 Hour +</Text>
-            </TouchableOpacity>
+            </View>
         </View>
         </View>
     
@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
     MyRates: {
         fontWeight: "600",
         fontSize: 18,
-        marginBottom: 20,
     },
 
     Free: {

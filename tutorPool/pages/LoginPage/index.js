@@ -42,26 +42,26 @@ const styles=StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
         backgroundColor:'white',
-        height:750
+        height:'100%'
     },
 
     logo: {
-        marginTop:100,
-        marginBottom:60,
+        marginTop:'15%',
+        marginBottom:'20%',
     },
 
     inputs: {
-        marginBottom:25,
+        marginBottom:'5%',
     },
 
     buttonBox: {
-        marginTop:20,
-        marginBottom:20,
+        marginTop:'5%',
+        marginBottom:'5%',
     },
 
     textBox: {
-        marginTop:20,
-        marginBottom:20,
+        marginTop:'5%',
+        marginBottom:'5%',
     },
 
     textStyle: {

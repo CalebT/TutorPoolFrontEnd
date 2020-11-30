@@ -43,7 +43,7 @@ const FindTutor = ({history}) => {
             </View>
             <View style={styles.tutorBox}>
                 <ScrollView style={styles.scrollStyle}>
-                    <UserCard text1="Becca Williams" text2="English, Science, Art" profilePic={Becca} onPress={()=>history.push('/chatbox')}/>
+                    <UserCard text1="Becca Williams" text2="English, Science, Art" profilePic={Becca} onPress={()=>history.push('/selectTutor')}/>
                     <UserCard text1="Anna Smith" text2="English, Science, Geography" profilePic={Anna}/>
                     <UserCard text1="Elizabeth Taylor" text2="Science, Art, History" profilePic={Elizabeth}/>
                     <UserCard text1="Ryan Philips" text2="English, French" profilePic={Ryan}/>
@@ -68,8 +68,8 @@ const styles=StyleSheet.create({
 
     topNavBox: {
         position:'absolute',
-        marginBottom:75 ,
-        top:10
+        marginBottom:'10%' ,
+        top:'2%'
     },
 
     maincontBox: {
@@ -80,15 +80,15 @@ const styles=StyleSheet.create({
     text: {
         fontSize:22,
         fontWeight:'bold',
-        marginTop:30,
-        marginLeft:30,
+        marginTop:'10%',
+        marginLeft:'10%',
     },
 
     subSelect: {
         display:'flex',
         flexDirection:'row',
-        marginLeft:8,
-        marginTop:10
+        marginLeft:'2%',
+        marginTop:'0.5%'
     },
 
     tutorBox:{
@@ -96,7 +96,7 @@ const styles=StyleSheet.create({
         alignItems:'center',
         width:'100%',
         marginLeft:'2.5%',
-        height:'75%',
+        height:'77%',
     },
 
     scrollStyle:{

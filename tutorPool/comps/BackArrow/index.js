@@ -2,16 +2,14 @@ import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import propTypes from "prop-types";
 
-const BackArrow = ({ text }) => {
+const BackArrow = ({ text, onPress}) => {
   return (
     <View>
-      <TouchableOpacity style={styles.Box}>
-        <TouchableOpacity style={styles.Arrow}>
+      <TouchableOpacity style={styles.Box} onPress={onPress}>
+        <View style={styles.Arrow}>
         <Image source={require('../../images/arrow-left.png')}></Image>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.Student}>
+        </View>
           <Text style={styles.Text}>{text}</Text>
-        </TouchableOpacity>
       </TouchableOpacity>
     </View>
   );
@@ -33,12 +31,14 @@ const styles = StyleSheet.create({
   Text: {
    paddingTop: 10,
    marginLeft: 10,
+   fontSize: 22,
 
   }
 });
 
 BackArrow.defaultprops = {
-  text: "Default"
+  text: "Default",
+  onPress:()=>{}
 };
 
 BackArrow.propTypes = {

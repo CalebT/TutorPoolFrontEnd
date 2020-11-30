@@ -65,28 +65,27 @@ const styles=StyleSheet.create({
         display:'flex',
         justifyContent:'center',
         alignItems:'center',
-        top:-10
     },
 
     topNavBox: {
         position:'absolute',
-        marginBottom:75 ,
-        top:10
+        marginBottom:'10%' ,
+        top:'2%'
     },
 
     textBox: {
-        width:300
+        width:"75%"
     },
 
     selectionBox: {
         display:'flex',
         flexDirection:'row',
         alignContent:'space-between',
-        margin:10
+        margin:'3%'
     },
 
     buttonBox: {
-        marginTop: 20,
+        marginTop: '5%',
     },
 
     navbarBox: {

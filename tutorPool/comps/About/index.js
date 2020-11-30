@@ -5,10 +5,10 @@ import propTypes from "prop-types";
 const AboutMe = ({ text }) => {
   return (
     <View>
-      <TouchableOpacity style={styles.AboutMe}>
+      <View style={styles.AboutMe}>
         <Text style={styles.title}>About me</Text>
         <Text style={styles.description}>{text}</Text>
-      </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     color: "#000",
     fontSize: 18,
     margin: 10,
+    marginBottom:0,
     fontWeight: "400"
   },
   description: {

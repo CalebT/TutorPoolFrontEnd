@@ -39,10 +39,11 @@ const ProfileStudent = ({history}) => {
             <View style={styles.infoCont}>
                 <Text style={styles.textStyle}>Personal Information</Text>
                 <View>
-                    <Text>Email</Text>
+                    <Text style={styles.textStyle2}>Email</Text>
                     <View style={styles.inputBox}><Text>exampleEmail@gmail.com</Text></View>
-                    <Text>Password</Text>
+                    <Text style={styles.textStyle2}>Password</Text>
                     <View style={styles.inputBox}><Text>**********</Text></View>
+                    <Text style={styles.textStyle2}>Grade: 10</Text>
                 </View>
             </View>
 
@@ -109,10 +110,15 @@ const styles=StyleSheet.create({
 
     textStyle: {
         fontWeight:'bold',
-        fontSize:18,
+        fontSize:20,
         marginBottom:'5%',
-
     },
+
+    textStyle2: {
+        fontWeight:'bold',
+        fontSize:16,
+    },
+
 
     navbarBox: {
         position:'absolute',
@@ -129,9 +135,8 @@ const styles=StyleSheet.create({
         paddingLeft:'5%',
         marginBottom:'8%',
         marginTop:'3%'
-    }
+    },
 
-  
 
 });
 

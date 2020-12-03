@@ -1,12 +1,12 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, ScrollView} from 'react-native';
+import {View, Text, Image, StyleSheet, ScrollView, Alert} from 'react-native';
 import NavBar from '../../comps/NavBar';
 import TopNav from '../../comps/TopNav';
 import UserCard from '../../comps/UserCard';
 import AboutInput from '../../comps/AboutInput';
 import Rates from '../../comps/Rates';
 import AvailableinText from '../../comps/AvailableinText';
-import SmallBubbleButton from '../../comps/SmallBubbleButton';
+import SmallBubbleFull from '../../comps/SmallBubbleFull';
 import BlueButton from '../../comps/BlueButton';
 import HomepageText from '../../comps/Homepage';
 import MyRatesInput from '../../comps/MyRatesInput';
@@ -26,50 +26,67 @@ const useractive = require('../../images/user-active.png');
 const icon = require('../../images/icon.png');
 
 const Becca = require('../../images/becca.png');
+const star = require('../../images/star.png')
 
 
 
-const TutorHomepage = ({history}) => {
+const SelectTutorPage = ({history}) => {
+
+    const showAlert = () => {
+        Alert.alert(
+            'Request for tutoring has been successfully submitted.'
+        )
+    }
+
     return <View style={styles.viewCont}>
         <View style={styles.topNavBox}>
             <TopNav onPress1={()=>history.push('/pulloutmenu')}/>
         </View>
-
-
-        <ScrollView style={styles.scrollView}>
-            <View style={styles.title}>
-                <HomepageText text="Homepage" />
-            </View>
-       
-            <View style={styles.Box}>
-                <View style={styles.TutorInfo}>
-                    <View style={styles.tutor}>
-                    <UserCard text1="Becca Williams" text2="English Art" profilePic={Becca}/>
-                    </View>
-                <About text="Hi! My name is Becca Williams and I am a tutor. I have always tutored when I was at school and specia-lize in English and Arts. Let’s learn together!"/>
-                <Rates text1="Free" text2="$20" text3="$30"/>
-                </View>
-
-            <View style={styles.Avail}>
-                <SmallBubbleButton text="Video Calls"/>
-                <SmallBubbleButton text="In-Person"/>
-            </View>
-            </View>
-
-            <View style={styles.Review}>
-                <Review text1="Writing essays has never been easy for our daughter, but you have managed to help her out. She is more confident when it comes [...]" text2="Bob Smith" text3="5.0"/>
-            </View>
-
-            <View style={styles.buttonBox}>
-                <BlueButton text="Request Tutoring"/>
-            </View>
-        </ScrollView>
         
+        <View style={styles.mainCont}>
+            <View style={styles.back} > 
+                <HomepageText text={"Homepage"}></HomepageText>
+            </View>
+                <ScrollView style={styles.scrollStyle} contentContainerStyle={styles.wrap}>
+                    <View style={styles.profileBox}>
+                        <View style={styles.mainProf}>
+                            <Image source={Becca} style={styles.pic}/>
+                            <View>
+                                <Text style={styles.textStyle1}>Becca Williams</Text>
+                                <Text style={styles.textStyle2}>English, Art</Text>
+                                <View style={styles.rating}>
+                                    <Image source={star}></Image>
+                                    <Text style={styles.ratingColor}>5.0</Text>
+                                </View>
+                            </View>
+                        </View>
+                        <About text="Hi! My name is Becca Williams and I am a tutor. I have always tutored when I was at school and specialize in English and Arts. Let’s learn together!"/>
+                        <Rates text1="Free" text2="$20" text3="$30"/>
+                        <View style={styles.Avail}>
+                            <View style={styles.availCont}>
+                                <AvailableinText text="Available in"/>
+                            </View>
+                            <View style={styles.availCont}>
+                                <SmallBubbleFull text="Video Calls"/>
+                            </View>
+                            <View style={styles.availCont}>
+                                <SmallBubbleFull text="In-Person"/>
+                            </View>
+                        </View>
+                        <View style={styles.buttonBox}>
+                            <BlueButton text="Request Tutoring" onPress={showAlert}/>
+                        </View>
+                    </View>
 
-        <View style={styles.navbarBox}>
-            <NavBar homeimg={homeactive} messageimg={message} bellimg={bell} userimg={user} onPress1={()=>history.push('/tutorhomepage')} onPress2={()=>history.push('/tutormessages')} onPress3={()=>history.push('/Notifications')} onPress4={()=>history.push('/profiletutor')}></NavBar>
+                    <Text style={styles.reviewTitle}>Reviews</Text>
+                    <View style={styles.Review}>
+                        <Review text1="Writing essays has never been easy for our daughter, but you have managed to help her out. She is more confident when it comes [...]" text2="Bob Smith" text3="5.0"/>
+                    </View>
+                </ScrollView>
         </View>
-    
+        <View style={styles.navbarBox}>
+            <NavBar homeimg={homeactive} messageimg={message} bellimg={bell} userimg={user} onPress1={()=>history.push('/Tutorhomepage')} onPress2={()=>history.push('/tutorRates')} onPress3={()=>history.push('/Notifications')} onPress4={()=>history.push('/profilestudent')}/>
+        </View>
     </View>
 }
 
@@ -79,88 +96,109 @@ const styles=StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
         backgroundColor:'white',
-        height:750
+        height:'100%'
     },
 
     topNavBox: {
         position:'absolute',
-        marginBottom:75 ,
-        top:10
+        marginBottom:'10%' ,
+        top:'2%'
     },
 
-    title: {
-        left:25
-    },
-
-    maincontBox: {
+    mainCont: {
         position:'absolute',
-        top:'10%',
+        top:'-38%',
+        width:'90%',
+        height:'130%',
     },
 
-    Box: {
-        marginTop:20,
-        paddingBottom:15,
-        backgroundColor:"#FFF",
-        shadowColor: "#000000",
-        shadowOpacity: 0.1,
-        shadowRadius: 2,
-        shadowOffset: {
-             height: 3,
-            width: 3
-         },
-        alignItems:"center",
-        justifyContent:"center",
-        borderRadius:10,
-
+    back: {
+        marginTop:"100%",
+        marginRight:'40%'
     },
 
-    tutor:{
+    buttonBox: {
+        marginBottom:20
+    },
+
+    profileBox: {
+        backgroundColor:"#FAFAFA",
+        width:'90%',
+        height:'auto',
         display:'flex',
+        alignItems:'center',
+        borderRadius:10,
+        elevation:10,
+        marginTop:10
     },
 
-    TutorInfo: {
-        alignItems:"center",
-        justifyContent:"center",
-   
+    mainProf: {
+        display:'flex',
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-around',
+        marginTop:15
     },
 
-    scrollView: {
-        height:'81%',
-        width:'95%',
-        position:'absolute',
-        top:'10%',
-    }, 
-
-    navbarBox: {
-        position:'absolute',
-        bottom:10,
+    pic: {
+        marginRight:15,
     },
 
-    Avail: {
-        width: 300,
-        flexDirection:"row",
-        alignItems:"center",
-        justifyContent:"space-evenly",
-        margin: 20,
+    textStyle1: {
+        fontSize: 22,
+        fontWeight: 'bold',
     },
 
-    Rates: {
-        marginTop:10,
+    textStyle2: {
+        fontSize: 18,
+        fontWeight:'bold',
     },
 
-    Review: {
-        marginTop:-10,
-        marginBottom:10,
+    rating: {
+        display:'flex',
+        flexDirection:'row',
+        alignItems:'center',
+    },
+
+    ratingColor: {
+        marginLeft:'5%',
+        color:'#595CFF',
+        fontSize:16
+    },
+
+    scrollStyle:{
+        width:'100%',
+        height:'auto',
+    },
+
+    wrap: {
         display:'flex',
         alignItems:'center',
     },
 
-    buttonBox: {
+    Avail: {
         display:'flex',
-        alignItems:'center'
-    }
+        flexDirection:'row',
+        justifyContent:'space-around'
+    },
 
+    availCont: {
+        margin:10
+    },
+
+    reviewTitle:{
+        fontSize:26,
+        fontWeight:'bold',
+        position:'relative',
+        marginTop:15,
+        left:'-28%',
+    },
+
+    navbarBox: {
+        position:'absolute',
+        bottom:0,  
+    },
 
 });
 
-export default TutorHomepage;
+export default SelectTutorPage;

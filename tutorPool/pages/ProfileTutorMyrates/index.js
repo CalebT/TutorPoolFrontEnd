@@ -25,9 +25,11 @@ const icon = require('../../images/icon.png');
 
 
 
-const ProfileTutorMyRates = ({}) => {
+const ProfileTutorMyRates = ({history}) => {
     return <View style={styles.viewCont}>
-        <TopNav />
+        <View style={styles.topNavBox}>
+            <TopNav onPress1={()=>history.push('/pulloutmenu')}/>
+        </View>
         <View style={styles.navbarBox}>
         <HomepageText text="Profile" />
         <View style={styles.User}>
@@ -47,26 +49,26 @@ const ProfileTutorMyRates = ({}) => {
         </View>
         </View>
         <View style={styles.NavBar}>
-        <NavBar homeimg={home} messageimg={message} bellimg={bell} userimg={user}/>
+        <NavBar homeimg={home} messageimg={message} bellimg={bell} userimg={user} onPress1={()=>history.push('/Tutorhomepage')} onPress2={()=>history.push('/tutorRates')} onPress3={()=>history.push('/Notifications')} onPress4={()=>history.push('/profilestudent')}/>
         </View>
     </View>
 }
 
 const styles=StyleSheet.create({
     viewCont: {
-        display:"flex",
-        alignItems:"center",
-        justifyContent:"center",
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
         backgroundColor:'white',
-        marginTop:40,
-
+        height:'100%'
     },
 
-    navbarBox: {
-       
-        marginTop:10,
-        marginLeft:20,
+    topNavBox: {
+        position:'absolute',
+        marginBottom:'10%' ,
+        top:'2%'
     },
+
 
     User: {
         marginLeft:30,
